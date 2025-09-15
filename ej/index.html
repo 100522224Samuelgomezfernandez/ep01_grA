@@ -9,33 +9,43 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="site-header">
-    <div class="brand">
-      <img src="images/logo.svg" alt="Logo Mochileros Sin Fronteras" width="40" height="40">
-      <a class="site-name" href="index.html">Mochileros Sin Fronteras</a>
-    </div>
+    <header class="header">
+        <div class="header_brand">
+        <img src="images/logo.svg" alt="Logo Mochileros Sin Fronteras" width="40" height="40">
+        <a class="header_title" href="index.html">Mochileros Sin Fronteras</a>
+        </div>
 
-    <nav class="main-nav" aria-label="Menú principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="#experiencias">Experiencias</a></li>
-        <li><a href="#consejos">Consejos</a></li>
-        <li><a href="#foro">Foro</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+        <nav class="header_nav" aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#consejos">Consejos</a></li>
+            <li><a href="#foro">Foro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        </nav>
 
-    <div class="lang-and-logo">
-      <img class="brand-mark" src="images/logo.svg" alt="MSF marca">
-      <label for="lang" class="sr-only">Idioma</label>
-      <select id="lang" name="lang" aria-label="Seleccionar idioma">
-        <option value="es" selected>ES</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
+        <div class="header_lang_and_logo">
+        <img class="header_logo" src="images/logo.svg" alt="MSF marca">
+        <label for="lang" class="sr-only">Idioma</label>
+        <select id="lang" name="lang" aria-label="Seleccionar idioma">
+            <option value="es" selected>ES</option>
+            <option value="en">EN</option>
+        </select>
+        </div>
   </header>
-  
-  <main>
+
+  <main id="main-content" class="main">
+    <!-- Izquierda (2/3): bloque superior + carrusel + bloque inferior -->
+    <section class="main-column">
+      <!-- Bloque superior: banner -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Viaja lejos, gasta menos, aprende más</h1>
+          <p class="tagline">Guías y experiencias reales de mochileros por América, Asia, África y Oceanía.</p>
+          <a class="btn btn-primary" href="#packs">Ver packs recomendados</a>
+        </div>
+      </section>
 
   </main>
     
