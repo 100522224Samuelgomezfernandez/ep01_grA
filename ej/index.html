@@ -15,7 +15,7 @@
         <a class="header_title" href="index.html">Mochileros Sin Fronteras</a>
         </div>
 
-        <nav class="header_navigation" aria-label="Menú principal">
+        <nav class="header_menu" aria-label="Menú principal">
         <ul>
             <li><a href="index.html" aria-current="page">Inicio</a></li>
             <li><a href="#experiencias">Experiencias</a></li>
@@ -25,7 +25,7 @@
         </ul>
         </nav>
 
-        <div class="header_languages_logo">
+        <div class="header_language">
         <img class="header_logo" src="images/logo.svg" alt="MSF marca">
         <label for="language" class="sr-only">Idioma</label>
         <select id="language" name="language" aria-label="Seleccionar idioma">
@@ -37,64 +37,64 @@
 
   <main id="main_content" class="main">
     <!-- Izquierda (2/3): bloque superior + carrusel + bloque inferior -->
-    <section class="main_column">
+    <section class="left_column">
       <!-- Bloque superior: banner -->
-      <section class="main_banner">
-        <div class="main_banner_content">
-          <h1 id="main_banner_title">Viaja lejos, gasta menos, aprende más</h1>
-          <p class="main_banner_subtitle">Guías y experiencias reales de mochileros por América, Asia, África y Oceanía.</p>
-          <a class="main_banner_button" href="#">Ver packs recomendados</a>
+      <section class="upper_block">
+        <div class="banner">
+          <h1 id="banner_title">Viaja lejos, gasta menos, aprende más</h1>
+          <p class="banner_subtitle">Guías y experiencias reales de mochileros por América, Asia, África y Oceanía.</p>
+          <a class="banner_button" href="#">Ver packs recomendados</a>
         </div>
       </section>
 
     <!-- Carrusel de Packs -->
-      <section id="packs" class="packs" aria-labelledby="packs-title">
-        <div class="section-head">
+      <section id="packs" class="packs">
+        <div class="packs_head">
           <h2 id="packs-title">Packs de viaje recomendados</h2>
-          <div class="arrows" aria-hidden="true">
-            <button class="arrow" title="Anterior" disabled>&larr;</button>
-            <button class="arrow" title="Siguiente" disabled>&rarr;</button>
+          <div class="arrows">
+            <button type="button" title="Anterior" >&laquo;</button>
+            <button type="button" title="Siguiente" >&raquo;</button>
           </div>
         </div>
 
-        <div class="carousel" role="region" aria-label="Carrusel de packs (desliza horizontalmente)">
-          <article class="pack-card" id="pack-peru">
+        <div class="carousel_list">
+          <article class="pack_item" id="pack-peru">
             <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1200&auto=format&fit=crop" alt="Machu Picchu al amanecer">
-            <div class="pack-body">
+            <div class="pack_body">
               <h3>Perú Andino 12 días</h3>
               <p>Ruta Cusco · Valle Sagrado · Aguas Calientes · Montaña de 7 Colores. Incluye alojamientos hostales y traslados interurbanos.</p>
               <p class="price">Desde 599&nbsp;€</p>
-              <a class="btn btn-accent" href="compra.html">Comprar</a>
+              <a class="purche_button" href="compra.html">Comprar</a>
             </div>
           </article>
 
-          <article class="pack-card" id="pack-vietnam">
+          <article class="pack_item" id="pack-vietnam">
             <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?q=80&w=1200&auto=format&fit=crop" alt="Barcas tradicionales en la bahía de Ha Long">
-            <div class="pack-body">
+            <div class="pack_body">
               <h3>Vietnam Norte &amp; Bahía de Ha Long</h3>
               <p>Trekking en Sapa, Hanoi histórico y crucero diurno por Ha Long. Experiencias locales y buses nocturnos.</p>
               <p class="price">Desde 549&nbsp;€</p>
-              <a class="btn btn-accent" href="compra.html">Comprar</a>
+              <a class="purche_button" href="compra.html">Comprar</a>
             </div>
           </article>
 
-          <article class="pack-card" id="pack-marruecos">
+          <article class="pack_item" id="pack-marruecos">
             <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop" alt="Dunas del Sahara al atardecer">
-            <div class="pack-body">
+            <div class="pack_body">
               <h3>Marruecos Sahara Express</h3>
               <p>Marrakech · Ait Ben Haddou · Noche en jaima en el desierto de Merzouga. Transporte en minivan compartida.</p>
               <p class="price">Desde 299&nbsp;€</p>
-              <a class="btn btn-accent" href="compra.html">Comprar</a>
+              <a class="purche_button" href="compra.html">Comprar</a>
             </div>
           </article>
 
-          <article class="pack-card" id="pack-japon">
+          <article class="pack_item" id="pack-japon">
             <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d7?q=80&w=1200&auto=format&fit=crop" alt="Templo en Kioto con arces rojos">
-            <div class="pack-body">
+            <div class="pack_body">
               <h3>Japón por libre 10 días</h3>
               <p>Tokio · Kioto · Nara con JR Pass parcial, cápsulas y ryokan económico. Asesoría de rutas y tarjetas IC.</p>
               <p class="price">Desde 899&nbsp;€</p>
-              <a class="btn btn-accent" href="compra.html">Comprar</a>
+              <a class="purche_button" href="compra.html">Comprar</a>
             </div>
           </article>
         </div>
