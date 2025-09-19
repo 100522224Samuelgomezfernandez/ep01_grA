@@ -9,98 +9,199 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header_brand">
-        <img src="images/logo.svg" alt="Logo Mochileros Sin Fronteras" width="40" height="40">
-        <a class="header_title" href="index.html">Mochileros Sin Fronteras</a>
-        </div>
 
-        <nav class="header_menu" aria-label="Menú principal">
+  <header class="header">
+    <div class="header_brand">
+        <h1><a class="header_title" href="index.html">Mochileros Sin Fronteras</a></h1>
+    </div>
+    
+    <nav class="header_nav">
         <ul>
-            <li><a href="index.html" aria-current="page">Inicio</a></li>
-            <li><a href="#experiencias">Experiencias</a></li>
-            <li><a href="#consejos">Consejos</a></li>
-            <li><a href="#foro">Foro</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Experiencias</a></li>
+            <li><a href="#">Consejos</a></li>
+            <li><a href="#">Foro</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
-        </nav>
-
-        <div class="header_language">
-        <img class="header_logo" src="images/logo.svg" alt="MSF marca">
-        <label for="language" class="sr-only">Idioma</label>
-        <select id="language" name="language" aria-label="Seleccionar idioma">
-            <option value="es" selected>ES</option>
-            <option value="en">EN</option>
-        </select>
-        </div>
+    </nav>
+    
+    <div class="header_right">
+      <img src="images/logo.png" alt="Logo Mochileros" class="header_logo">
+      <select class="language_selector">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+      </select>
+    </div>
   </header>
 
-  <main id="main_content" class="main">
-    <!-- Izquierda (2/3): bloque superior + carrusel + bloque inferior -->
+  <main class="main">
+    <!-- Izquierda -->
     <section class="left_column">
-      <!-- Bloque superior: banner -->
+      <!-- Bloque superior -->
       <section class="upper_block">
         <div class="banner">
-          <h1 id="banner_title">Viaja lejos, gasta menos, aprende más</h1>
+          <h1 class="banner_title">Viaja lejos, gasta menos, aprende más</h1>
           <p class="banner_subtitle">Guías y experiencias reales de mochileros por América, Asia, África y Oceanía.</p>
           <a class="banner_button" href="#">Ver packs recomendados</a>
         </div>
-      </section>
 
-    <!-- Carrusel de Packs -->
-      <section id="packs" class="packs">
-        <div class="packs_head">
-          <h2 id="packs-title">Packs de viaje recomendados</h2>
-          <div class="arrows">
-            <button type="button" title="Anterior" >&laquo;</button>
-            <button type="button" title="Siguiente" >&raquo;</button>
+        <!-- Carrusel de Packs -->
+        <div class="packs">
+          <div class="packs_head">
+            <h2 class="packs-title">Packs de viaje recomendados</h2>
+            <div class="arrows">
+              <button type="button" title="Anterior" >&laquo;</button>
+              <button type="button" title="Siguiente" >&raquo;</button>
+            </div>
+          </div>
+
+          <div class="carousel_container">
+            <article class="pack_item" id="pack-peru">
+              <img src="images/pack_1.jpg" alt="Machu Picchu">
+              <div class="pack_body">
+                <h3>Perú Andino 12 días Cusco y Machu Picchu</h3>
+                <p>Ruta Cusco · Valle Sagrado · Aguas Calientes · Montaña de 7 Colores. Incluye alojamientos hostales y traslados interurbanos.</p>
+                <span class="price">599€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="pack_item" id="pack-vietnam">
+              <img src="images/pack_2.jpg" alt="Bahía de Ha Long">
+              <div class="pack_body">
+                <h3>Vietnam Norte &amp; Bahía de Ha Long</h3>
+                <p>Trekking en Sapa, Hanoi histórico y crucero diurno por Ha Long. Experiencias locales y buses nocturnos.</p>
+                <span class="price">549€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="pack_item" id="pack-marruecos">
+              <img src="images/pack_3.jpg" alt="Dunas del Sahara">
+              <div class="pack_body">
+                <h3>Marruecos Sahara Express</h3>
+                <p>Marrakech · Ait Ben Haddou · Noche en jaima en el desierto de Merzouga. Transporte en minivan compartida.</p>
+                <span class="price">299€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="carousel_list">
-          <article class="pack_item" id="pack-peru">
-            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1200&auto=format&fit=crop" alt="Machu Picchu al amanecer">
-            <div class="pack_body">
-              <h3>Perú Andino 12 días</h3>
-              <p>Ruta Cusco · Valle Sagrado · Aguas Calientes · Montaña de 7 Colores. Incluye alojamientos hostales y traslados interurbanos.</p>
-              <p class="price">Desde 599&nbsp;€</p>
-              <a class="purche_button" href="compra.html">Comprar</a>
+      <!-- Bloque inferior -->
+      <section class="lower_block">
+        <h2>Experiencias de la comunidad</h2>
+        <div class="experiences_grid">
+          <article class="experience_card">
+            <img src="images/exp1.png" alt="Dormitorio hostal">
+            <h3>Elegir un buen hostal</h3>
+            <div class="actions">
+              <a class="see_more_button" href="registro.html">Ver más</a>
+              <a class="like_icon" href="registro.html">♥</a>
             </div>
           </article>
 
-          <article class="pack_item" id="pack-vietnam">
-            <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?q=80&w=1200&auto=format&fit=crop" alt="Barcas tradicionales en la bahía de Ha Long">
-            <div class="pack_body">
-              <h3>Vietnam Norte &amp; Bahía de Ha Long</h3>
-              <p>Trekking en Sapa, Hanoi histórico y crucero diurno por Ha Long. Experiencias locales y buses nocturnos.</p>
-              <p class="price">Desde 549&nbsp;€</p>
-              <a class="purche_button" href="compra.html">Comprar</a>
+          <article class="experience_card">
+            <img src="images/exp2.jpg" alt="Autobús nocturno en Vietnam">
+            <h3>Buses nocturnos: trucos</h3>
+            <div class="actions">
+              <a class="see_more_button" href="registro.html">Ver más</a>
+              <a class="like_icon" href="registro.html">♥</a>
             </div>
           </article>
 
-          <article class="pack_item" id="pack-marruecos">
-            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop" alt="Dunas del Sahara al atardecer">
-            <div class="pack_body">
-              <h3>Marruecos Sahara Express</h3>
-              <p>Marrakech · Ait Ben Haddou · Noche en jaima en el desierto de Merzouga. Transporte en minivan compartida.</p>
-              <p class="price">Desde 299&nbsp;€</p>
-              <a class="purche_button" href="compra.html">Comprar</a>
+          <article class="experience_card">
+            <img src="images/exp3.jpg" alt="Mercado callejero en Bankog">
+            <h3>Comer barato en Asia</h3>
+            <div class="actions">
+              <a class="see_more_button" href="registro.html">Ver más</a>
+              <a class="like_icon" href="registro.html">♥</a>
             </div>
           </article>
 
-          <article class="pack_item" id="pack-japon">
-            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d7?q=80&w=1200&auto=format&fit=crop" alt="Templo en Kioto con arces rojos">
-            <div class="pack_body">
-              <h3>Japón por libre 10 días</h3>
-              <p>Tokio · Kioto · Nara con JR Pass parcial, cápsulas y ryokan económico. Asesoría de rutas y tarjetas IC.</p>
-              <p class="price">Desde 899&nbsp;€</p>
-              <a class="purche_button" href="compra.html">Comprar</a>
+          <article class="experience_card">
+            <img src="images/exp4.jpg" alt="Seguro médico de viaje">
+            <h3>Seguro médico en ruta</h3>
+            <div class="actions">
+              <a class="see_more_button" href="registro.html">Ver más</a>
+              <a class="like_icon" href="registro.html">♥</a>
             </div>
           </article>
         </div>
       </section>
+      </aside>
+    </section>
 
+    <!-- Derecha -->
+    <aside class="right_column">
+      <section class="login_form">
+        <h2>Accede</h2>
+          <form>
+            <input type="text" placeholder="Usuario" class="form_input">
+            <input type="password" placeholder="Contraseña" class="form_input">
+            <label class="checkbox_label">
+              <input type="checkbox"> Recordar credenciales</label>
+            <a href="usuario.html" class="login_button">Iniciar sesión</a>
+          </form>
+          <a href="registro.html" class="register_button">Registro</a>
+      </section>
+
+      <section class="sidebar_section">
+        <h2>Top destinos mochileros</h2>
+        <ul class="destinations_list">
+          <li><a href="#">La Paz (Bolivia)</a></li>
+          <li><a href="#">Hoi An (Vietnam)</a></li>
+          <li><a href="#">Chiang Mai (Tailandia)</a></li>
+          <li><a href="#">Cusco (Perú)</a></li>
+          <li><a href="#">Chefchaouen (Marruecos)</a></li>
+        </ul>
+      </section>
+
+      <section class="sidebar_section">
+        <h2>Consejos rápidos</h2>
+        <ul class="tips_list">
+          <li><a href="#">Lleva seguro médico</a></li>
+          <li><a href="#">Consulta visados con antelación</a></li>
+          <li><a href="#">Copia digital del pasaporte</a></li>
+          <li><a href="#">Tarjeta SIM local o eSIM</a></li>
+        </ul>
+      </section>
+
+      <section class="sidebar_section">
+        <h2>Próximos encuentros</h2>
+        <ul class="lista-enlaces">
+          <li><a href="#">Senderismo – Madrid (29/09)</a></li>
+          <li><a href="#">Cine-foro – Sevilla (05/10)</a></li>
+          <li><a href="#">Taller de mochilas – Barcelona (12/10)</a></li>
+        </ul>
+      </section>
+    </aside>
   </main>
-    
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <section class="footer_content">
+      <p class="copyright">© 2025 Mochileros Sin Fronteras</p>
+      
+      <div class="footer_links">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+      
+      <div class="social_icons">
+        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a> 
+        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a> 
+        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a> 
+      </div>
+      
+      <div class="newsletter_form">
+        <input type="email" placeholder="Tu email" class="newsletter_input">
+        <button class="newsletter_button">Suscribir</button>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
