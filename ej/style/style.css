@@ -566,4 +566,32 @@ body {
         padding: 6px 12px;
         font-size: 16px;
     }
+
+}
+
+/* Registro – caja centrada y aspecto del sketch (global) */
+.main.registro { justify-content: center; }
+
+.form_page {
+    max-width: 640px;
+    margin: 0 auto;
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+}
+
+.form_page .form_input { border-radius: 0; }
+
+.registration_form .form_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+.registration_form .full { grid-column: 1 / -1; }
+
+.form_actions { text-align: right; }
+.form_page .login_button { display: inline-block; width: auto; padding: 10px 16px; }
+
+/* Registro – breakpoint tablet */
+@media (max-width: 768px) {
+    .registration_form .form_grid { grid-template-columns: 1fr; }
 }
