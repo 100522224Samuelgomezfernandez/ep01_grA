@@ -645,3 +645,12 @@ body {
   border: 1px solid #ecf0f1;
   padding: 6px;
 }
+
+
+/* Compra – pequeño ajuste de separación de acciones */
+.form_actions .purchase_button { margin-left: 0; }
+
+/* Compra – en tablet/móvil el grid del formulario a una columna (reutiliza la rejilla del registro) */
+@media (max-width: 768px) {
+  .registration_form .form_grid { grid-template-columns: 1fr; }
+}
