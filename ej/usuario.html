@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuario | Mochileros Sin Fronteras</title>
+  <meta name="description" content="Página de usuario con filtros de experiencias y últimas novedades.">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header_brand">
+      <h1><a class="header_title" href="index.html">Mochileros Sin Fronteras</a></h1>
+    </div>
+
+    <nav class="header_nav">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Experiencias</a></li>
+        <li><a href="#">Consejos</a></li>
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_right">
+      <img src="images/logo.png" alt="Logo Mochileros" class="header_logo">
+      <select class="language_selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Columna izquierda: igual que en index -->
+    <section class="left_column">
+      <section class="upper_block">
+        <div class="banner">
+          <h1 class="banner_title">Viaja lejos, gasta menos, aprende más</h1>
+          <p class="banner_subtitle">Guías y experiencias reales de mochileros por América, Asia, África y Oceanía.</p>
+          <a class="banner_button" href="#">Ver packs recomendados</a>
+        </div>
+
+        <div class="packs">
+          <div class="packs_head">
+            <h2 class="packs-title">Packs de viaje recomendados</h2>
+            <div class="arrows">
+              <button type="button" title="Anterior">&laquo;</button>
+              <button type="button" title="Siguiente">&raquo;</button>
+            </div>
+          </div>
+
+          <div class="carousel_container">
+            <article class="pack_item" id="pack-peru">
+              <img src="images/pack_1.jpg" alt="Machu Picchu">
+              <div class="pack_body">
+                <h3>Perú Andino 12 días Cusco y Machu Picchu</h3>
+                <p>Ruta Cusco · Valle Sagrado · Aguas Calientes · Montaña de 7 Colores. Incluye alojamientos hostales y traslados interurbanos.</p>
+                <span class="price">599€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="pack_item" id="pack-vietnam">
+              <img src="images/pack_2.jpg" alt="Bahía de Ha Long">
+              <div class="pack_body">
+                <h3>Vietnam Norte &amp; Bahía de Ha Long</h3>
+                <p>Trekking en Sapa, Hanoi histórico y crucero diurno por Ha Long. Experiencias locales y buses nocturnos.</p>
+                <span class="price">549€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
+
+            <article class="pack_item" id="pack-marruecos">
+              <img src="images/pack_3.jpg" alt="Dunas del Sahara">
+              <div class="pack_body">
+                <h3>Marruecos Sahara Express</h3>
+                <p>Marrakech · Ait Ben Haddou · Noche en jaima en el desierto de Merzouga. Transporte en minivan compartida.</p>
+                <span class="price">299€</span>
+                <a class="purchase_button" href="compra.html">Comprar</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lower_block">
+        <h2>Experiencias de la comunidad</h2>
+        <div class="experiences_grid">
+          <article class="experience_card">
+            <img src="images/exp1.png" alt="Dormitorio hostal">
+            <h3>Elegir un buen hostal</h3>
+            <div class="actions">
+              <a class="see_more_button" href="#">Ver más</a>
+              <a class="like_icon" href="#">♥</a>
+            </div>
+          </article>
+
+          <article class="experience_card">
+            <img src="images/exp2.jpg" alt="Autobús nocturno en Vietnam">
+            <h3>Buses nocturnos: trucos</h3>
+            <div class="actions">
+              <a class="see_more_button" href="#">Ver más</a>
+              <a class="like_icon" href="#">♥</a>
+            </div>
+          </article>
+
+          <article class="experience_card">
+            <img src="images/exp3.jpg" alt="Mercado callejero en Bangkok">
+            <h3>Comer barato en Asia</h3>
+            <div class="actions">
+              <a class="see_more_button" href="#">Ver más</a>
+              <a class="like_icon" href="#">♥</a>
+            </div>
+          </article>
+
+          <article class="experience_card">
+            <img src="images/exp4.jpg" alt="Seguro médico de viaje">
+            <h3>Seguro médico en ruta</h3>
+            <div class="actions">
+              <a class="see_more_button" href="#">Ver más</a>
+              <a class="like_icon" href="#">♥</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- Columna derecha: versión b -->
+    <aside class="right_column">
+
+      <!-- Panel de usuario (simulado) -->
+      <section class="login_form user_panel">
+        <h2>Nombre de usuario</h2>
+        <div class="user_profile">
+          <img src="images/perfil_demo.jpg" alt="Imagen de perfil" />
+        </div>
+        <a href="index.html" class="login_button">Cerrar sesión</a>
+      </section>
+
+      <!-- Busca experiencias -->
+      <section class="sidebar_section">
+        <h2>Busca experiencias</h2>
+        <form class="search_block">
+          <p class="filters">
+            <label><input type="checkbox"> América</label>
+            <label><input type="checkbox"> Europa</label>
+            <label><input type="checkbox"> Asia</label>
+            <label><input type="checkbox"> África</label>
+            <label><input type="checkbox"> Oceanía</label>
+          </p>
+          <div class="search_row">
+            <span class="search_icon" aria-hidden="true">🔍</span>
+            <input type="search" class="form_input" placeholder="Buscar por palabra clave">
+          </div>
+        </form>
+      </section>
+
+      <!-- Últimos consejos + formulario -->
+      <section class="sidebar_section">
+        <h2>Últimos consejos</h2>
+        <ul class="tips_list">
+          <li><a href="#">Cómo ahorrar dinero en hostales</a></li>
+          <li><a href="#">Apps para planear viajes</a></li>
+          <li><a href="#">Visados fáciles en Asia</a></li>
+          <li><a href="#">Evitar estafas comunes</a></li>
+        </ul>
+
+        <form class="advice_form" style="margin-top:12px;">
+          <h3 style="font-size:16px; color:#2c3e50; margin-bottom:8px;">¿Tienes algún consejo?</h3>
+          <input type="text" class="form_input" placeholder="Título del consejo">
+          <textarea class="form_input" rows="3" placeholder="Escribe aquí tu consejo..."></textarea>
+          <button type="submit" class="register_button">Enviar</button>
+        </form>
+      </section>
+
+      <!-- Mini calendario (no funcional) -->
+      <section class="sidebar_section">
+        <h2>Calendario</h2>
+        <div class="mini_calendar">
+          <div class="cal_head">Septiembre 2025</div>
+          <table>
+            <thead>
+              <tr><th>L</th><th>M</th><th>X</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+              <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+              <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+              <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+              <tr><td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <section class="footer_content">
+      <p class="copyright">© 2025 Mochileros Sin Fronteras</p>
+      <div class="footer_links">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+      <div class="social_icons">
+        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a>
+        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a>
+      </div>
+      <div class="newsletter_form">
+        <input type="email" placeholder="Tu email" class="newsletter_input">
+        <button class="newsletter_button">Suscribir</button>
+      </div>
+    </section>
+  </footer>
+
+</body>
+</html>
