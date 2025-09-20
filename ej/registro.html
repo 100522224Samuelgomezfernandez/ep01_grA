@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Mochileros Sin Fronteras</title>
+  <meta name="description" content="Registro de nuevos usuarios en Mochileros Sin Fronteras.">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header_brand">
+      <h1><a class="header_title" href="index.html">Mochileros Sin Fronteras</a></h1>
+    </div>
+
+    <nav class="header_nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Experiencias</a></li>
+        <li><a href="#">Consejos</a></li>
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_right">
+      <img src="images/logo.png" alt="Logo Mochileros" class="header_logo">
+      <select class="language_selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="login_form form_page">
+      <h2 class="form_title">Registro de nuevos usuarios</h2>
+
+      <form class="registration_form" action="#" method="post" enctype="multipart/form-data">
+        <div class="form_grid">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" class="form_input" required>
+          </div>
+
+          <div>
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" name="apellidos" type="text" class="form_input" required>
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" class="form_input" required>
+          </div>
+
+          <div>
+            <label for="email2">Confirmar correo</label>
+            <input id="email2" name="email2" type="email" class="form_input" required>
+          </div>
+
+          <div class="full">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input id="nacimiento" name="nacimiento" type="date" class="form_input" required>
+          </div>
+
+          <div>
+            <label for="login">Login</label>
+            <input id="login" name="login" type="text" class="form_input" required>
+          </div>
+
+          <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="form_input" required>
+          </div>
+
+          <div class="full">
+            <label for="avatar">Subir imagen de perfil</label>
+            <input id="avatar" name="avatar" type="file" accept="image/*" class="form_input">
+          </div>
+        </div>
+
+        <p class="terms">
+          <label>
+            <input type="checkbox" required>
+            Acepto la <a href="privacidad.html">Política de privacidad</a>
+          </label>
+        </p>
+
+        <div class="form_actions">
+          <!-- Enlace solicitado que “envía” y navega a Versión b -->
+          <a class="login_button" href="usuario.html" role="button">Guardar datos y acceder</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="footer_content">
+      <p class="copyright">© 2025 Mochileros Sin Fronteras</p>
+
+      <div class="footer_links">
+        <a href="#">Sobre nosotros</a>
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+
+      <div class="social_icons">
+        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a>
+        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a>
+      </div>
+
+      <div class="newsletter_form">
+        <input type="email" placeholder="Tu email" class="newsletter_input">
+        <button class="newsletter_button">Suscribir</button>
+      </div>
+    </section>
+  </footer>
+
+</body>
+</html>
