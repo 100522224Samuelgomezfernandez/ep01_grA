@@ -595,3 +595,53 @@ body {
 @media (max-width: 768px) {
     .registration_form .form_grid { grid-template-columns: 1fr; }
 }
+
+/* Versión b: pequeños estilos de la barra derecha */
+.user_panel .user_profile {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.user_panel .user_profile img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.search_block .filters label {
+  display: inline-block;
+  margin: 0 10px 8px 0;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.search_row { position: relative; }
+.search_row .search_icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+.search_row .form_input { padding-left: 28px; }
+
+.mini_calendar .cal_head {
+  text-align: center;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.mini_calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+  background: white;
+}
+.mini_calendar th,
+.mini_calendar td {
+  border: 1px solid #ecf0f1;
+  padding: 6px;
+}
