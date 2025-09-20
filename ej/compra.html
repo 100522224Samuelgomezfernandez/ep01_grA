@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra | Mochileros Sin Fronteras</title>
+  <meta name="description" content="Resumen del pack seleccionado y formulario de compra.">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header_brand">
+      <h1><a class="header_title" href="index.html">Mochileros Sin Fronteras</a></h1>
+    </div>
+
+    <nav class="header_nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Experiencias</a></li>
+        <li><a href="#">Consejos</a></li>
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_right">
+      <img src="images/logo.png" alt="Logo Mochileros" class="header_logo">
+      <select class="language_selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Contenedor izquierdo: resumen del pack -->
+    <section class="left_column">
+      <section class="upper_block">
+        <article class="pack_item">
+          <img src="images/pack_2.jpg" alt="Imagen del pack seleccionado">
+          <div class="pack_body">
+            <h3>Pack Sudeste Asiático</h3>
+            <p>Vietnam y Camboya: buses, hostales y guía de visados. Itinerario pensado para mochileros con presupuesto ajustado.</p>
+            <span class="price">600€</span>
+          </div>
+        </article>
+
+        <section class="sidebar_section" style="margin-top:20px;">
+          <h2>Descripción del pack</h2>
+          <p>
+            Incluye ruta por Hanói, Bahía de Ha Long y templos de Angkor. Traslados en bus, 11 noches en hostales verificados y
+            recomendaciones de visados y seguros. Ideal para viajar ligero y conocer cultura local.
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <!-- Contenedor derecho: formulario de compra -->
+    <aside class="right_column">
+      <section class="login_form">
+        <h2>Formulario de compra</h2>
+
+        <!-- Reutilizo la misma rejilla del registro -->
+        <form class="registration_form" action="#" method="post" novalidate>
+          <div class="form_grid">
+            <div class="full">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" class="form_input" required>
+            </div>
+
+            <div class="full">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" class="form_input" required>
+            </div>
+
+            <div class="full">
+              <label for="tarjeta">Tipo de tarjeta</label>
+              <select id="tarjeta" name="tarjeta" class="form_input" required>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label for="num">Número de tarjeta</label>
+              <input id="num" name="num" type="text" inputmode="numeric" class="form_input" placeholder="1234 5678 9012 3456" required>
+            </div>
+
+            <div class="full">
+              <label for="titular">Nombre del titular de la tarjeta</label>
+              <input id="titular" name="titular" type="text" class="form_input" required>
+            </div>
+
+            <div>
+              <label for="caducidad">Fecha de caducidad</label>
+              <input id="caducidad" name="caducidad" type="month" class="form_input" required>
+            </div>
+
+            <div>
+              <label for="cvv">Código CVV</label>
+              <input id="cvv" name="cvv" type="text" inputmode="numeric" maxlength="4" class="form_input" required>
+            </div>
+          </div>
+
+          <div class="form_actions" style="margin-top:12px;">
+            <button type="submit" class="purchase_button">Comprar</button>
+            <button type="reset" class="see_more_button" style="margin-left:8px;">Borrar</button>
+          </div>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <section class="footer_content">
+      <p class="copyright">© 2025 Mochileros Sin Fronteras</p>
+      <div class="footer_links">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+      <div class="social_icons">
+        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a>
+        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a>
+      </div>
+      <div class="newsletter_form">
+        <input type="email" placeholder="Tu email" class="newsletter_input">
+        <button class="newsletter_button">Suscribir</button>
+      </div>
+    </section>
+  </footer>
+
+</body>
+</html>
