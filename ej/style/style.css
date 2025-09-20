@@ -654,3 +654,17 @@ body {
 @media (max-width: 768px) {
   .registration_form .form_grid { grid-template-columns: 1fr; }
 }
+
+
+/* Compra – mostrar el pack seleccionado por hash (#pack-...) */
+.pack_detail { display: none; }
+.pack_detail:target { display: block; }
+
+/* Ocultar el aviso cuando hay target */
+.pack_detail:target ~ .default_notice { display: none; }
+.default_notice {
+  background: #fff;
+  padding: 12px;
+  border: 1px solid #ecf0f1;
+  color: #2c3e50;
+}
