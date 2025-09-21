@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra | Aventureros Unidos</title>
-  <meta name="description" content="Resumen del pack seleccionado y formulario de compra.">
+  <meta name="description" content="Comprar pack de viaje seleccionado.">
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -36,61 +36,33 @@
   </header>
 
   <main class="main">
-    <!-- Contenedor izquierdo: resumen del pack -->
+    <!-- Contenedor izquierdo: Pack seleccionado -->
     <section class="left_column">
       <section class="upper_block">
-
-        <!-- Detalle Perú -->
-        <article id="pack-peru" class="pack_detail">
+        
+        <!-- Pack de ejemplo (siempre visible) -->
+        <div class="pack_detail">
           <article class="pack_item">
             <img src="images/pack_1.jpg" alt="Pack Perú Andino">
             <div class="pack_body">
               <h3>Perú Andino 12 días</h3>
-              <p>Ruta Cusco · Valle Sagrado · Machu Picchu. Hostales y buses interurbanos.</p>
+              <p>Ruta Cusco · Valle Sagrado · Machu Picchu. Incluye alojamientos hostales y traslados interurbanos.</p>
               <span class="price">599€</span>
             </div>
           </article>
-          <section class="sidebar_section" style="margin-top:20px;">
+          
+          <section class="sidebar_section">
             <h2>Descripción del pack</h2>
-            <p>Incluye entradas a Machu Picchu, recomendaciones de tren/bus y seguros para mochileros.</p>
+            <p>Este pack incluye:</p>
+            <ul>
+              <li>Entrada a Machu Picchu</li>
+              <li>Alojamiento en hostales verificados</li>
+              <li>Traslados en bus interurbano</li>
+              <li>Guía de viaje digital</li>
+              <li>Seguro básico de viaje</li>
+              <li>Asistencia 24/7</li>
+            </ul>
           </section>
-        </article>
-
-        <!-- Detalle Vietnam -->
-        <article id="pack-vietnam" class="pack_detail">
-          <article class="pack_item">
-            <img src="images/pack_2.jpg" alt="Pack Vietnam Norte">
-            <div class="pack_body">
-              <h3>Vietnam Norte &amp; Ha Long</h3>
-              <p>Trekking en Sapa, Hanói y crucero diurno por Ha Long. Buses nocturnos.</p>
-              <span class="price">549€</span>
-            </div>
-          </article>
-          <section class="sidebar_section" style="margin-top:20px;">
-            <h2>Descripción del pack</h2>
-            <p>Itinerario flexible, hostales verificados y guía rápida de visados para Vietnam.</p>
-          </section>
-        </article>
-
-        <!-- Detalle Marruecos -->
-        <article id="pack-marruecos" class="pack_detail">
-          <article class="pack_item">
-            <img src="images/pack_3.jpg" alt="Pack Marruecos Sahara">
-            <div class="pack_body">
-              <h3>Marruecos Sahara Express</h3>
-              <p>Marrakech · Ait Ben Haddou · noche en jaima en el desierto de Merzouga.</p>
-              <span class="price">299€</span>
-            </div>
-          </article>
-          <section class="sidebar_section" style="margin-top:20px;">
-            <h2>Descripción del pack</h2>
-            <p>Transporte en minivan compartida y consejos para regatear en los zocos con seguridad.</p>
-          </section>
-        </article>
-
-        <!-- Aviso si se entra sin hash, QUITAR ESTO -->
-        <div class="default_notice">
-          <p>Elige un pack en la página principal para ver el detalle aquí.</p>
         </div>
 
       </section>
@@ -101,35 +73,35 @@
       <section class="login_form">
         <h2>Formulario de compra</h2>
 
-        <!-- Reutilizo la misma rejilla del registro -->
-        <form class="registration_form" action="#" method="post" novalidate>
+        <form action="#" method="post">
           <div class="form_grid">
-            <div class="full">
+            <div>
               <label for="nombre">Nombre completo</label>
               <input id="nombre" name="nombre" type="text" class="form_input" required>
             </div>
 
-            <div class="full">
+            <div>
               <label for="email">Correo electrónico</label>
               <input id="email" name="email" type="email" class="form_input" required>
             </div>
 
-            <div class="full">
+            <div>
               <label for="tarjeta">Tipo de tarjeta</label>
               <select id="tarjeta" name="tarjeta" class="form_input" required>
+                <option value="">Selecciona...</option>
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
                 <option value="amex">American Express</option>
               </select>
             </div>
 
-            <div class="full">
-              <label for="num">Número de tarjeta</label>
-              <input id="num" name="num" type="text" inputmode="numeric" class="form_input" placeholder="1234 5678 9012 3456" required>
+            <div>
+              <label for="numero">Número de tarjeta</label>
+              <input id="numero" name="numero" type="text" class="form_input" placeholder="1234 5678 9012 3456" required>
             </div>
 
-            <div class="full">
-              <label for="titular">Nombre del titular de la tarjeta</label>
+            <div>
+              <label for="titular">Nombre del titular</label>
               <input id="titular" name="titular" type="text" class="form_input" required>
             </div>
 
@@ -140,13 +112,13 @@
 
             <div>
               <label for="cvv">Código CVV</label>
-              <input id="cvv" name="cvv" type="text" inputmode="numeric" maxlength="4" class="form_input" required>
+              <input id="cvv" name="cvv" type="text" class="form_input" maxlength="3" placeholder="123" required>
             </div>
           </div>
 
-          <div class="form_actions" style="margin-top:12px;">
+          <div class="form_actions">
             <button type="submit" class="purchase_button">Comprar</button>
-            <button type="reset" class="see_more_button" style="margin-left:8px;">Borrar</button>
+            <button type="reset" class="see_more_button">Borrar</button>
           </div>
         </form>
       </section>
@@ -162,9 +134,9 @@
         <a href="#">Ayuda</a>
       </div>
       <div class="social_icons">
-        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a>
-        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a>
-        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a>
+        <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
       </div>
       <div class="newsletter_form">
         <input type="email" placeholder="Tu email" class="newsletter_input">

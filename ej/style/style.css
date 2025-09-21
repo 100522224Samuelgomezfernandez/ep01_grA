@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset basico */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    line-height: 1.6;
 }
 
 /* Header */
@@ -39,7 +38,10 @@ body {
 .header_nav a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+}
+
+.header_nav a:hover {
+    text-decoration: underline;
 }
 
 .header_right {
@@ -49,18 +51,15 @@ body {
 }
 
 .header_logo {
-    width: 60px;
-    height: 45px;
-    
-    
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .language_selector {
-    padding: 5px 10px;
-    border: none;
+    padding: 5px;
     border-radius: 4px;
-    background-color: white;
-    color: #2c3e50;
 }
 
 /* Main Container */
@@ -72,10 +71,16 @@ body {
     padding: 0 20px;
 }
 
-/* Left Column - 2/3 width */
+/* Left Column */
 .left_column {
-    flex: 2;
+    width: 66%;
     background-color: white;
+    border-radius: 8px;
+}
+
+/* Right Column */
+.right_column {
+    width: 34%;
 }
 
 /* Upper Block */
@@ -89,34 +94,33 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 40px;
+    padding: 50px;
     text-align: center;
     margin-bottom: 30px;
+    border-radius: 8px;
 }
 
 .banner_title {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .banner_subtitle {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
 .banner_button {
     display: inline-block;
-    background-color: #e67e22;
+    background-color: orange;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
 }
 
 .banner_button:hover {
-    background-color: #d35400;
+    background-color: darkorange;
 }
 
 /* Packs Section */
@@ -124,7 +128,8 @@ body {
     margin-top: 30px;
 }
 
-.packs_head { 
+.packs_head {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -132,7 +137,6 @@ body {
 
 .packs-title {
     color: #2c3e50;
-    margin-bottom: 20px;
 }
 
 .arrows {
@@ -144,36 +148,29 @@ body {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 8px 15px;
-    font-size: 18px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 4px;
-}
-
-.arrows button:hover {
-    background-color: #2980b9;
 }
 
 /* Carousel */
 .carousel_container {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 10px 0;
+    gap: 15px;
+    justify-content: space-between;
 }
 
 .pack_item {
-    min-width: 250px;
+    flex: 1;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .pack_item img {
     width: 100%;
-    height: 150px;
-    background-color: #ecf0f1;
+    height: 180px;
     object-fit: cover;
+    background-color: #ecf0f1;
 }
 
 .pack_body {
@@ -192,8 +189,8 @@ body {
 }
 
 .price {
-    font-size: 20px;
-    color: #27ae60;
+    font-size: 18px;
+    color: green;
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
@@ -201,21 +198,21 @@ body {
 
 .purchase_button {
     display: inline-block;
-    background-color: #27ae60;
+    background-color: green;
     color: white;
-    padding: 8px 20px;
+    padding: 8px 15px;
     text-decoration: none;
     border-radius: 4px;
 }
 
 .purchase_button:hover {
-    background-color: #229954;
+    background-color: darkgreen;
 }
 
 /* Lower Block */
 .lower_block {
     padding: 20px;
-    border-top: 1px solid #ecf0f1;
+    border-top: 1px solid #ddd;
 }
 
 .lower_block h2 {
@@ -225,43 +222,43 @@ body {
 
 /* Experiences Grid */
 .experiences_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .experience_card {
+    width: calc(50% - 10px);
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .experience_card img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 150px;
+    background-color: #ecf0f1;
 }
 
 .experience_card h3 {
-    padding: 10px 15px 5px;
+    padding: 10px;
     color: #2c3e50;
-    font-size: 16px;
 }
 
 .actions {
-    padding: 10px 15px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .see_more_button {
     background-color: #3498db;
     color: white;
-    padding: 6px 15px;
+    padding: 5px 10px;
     text-decoration: none;
     border-radius: 4px;
     font-size: 14px;
+    border: none;
+    cursor: pointer;
 }
 
 .see_more_button:hover {
@@ -269,18 +266,9 @@ body {
 }
 
 .like_icon {
-    color: #e74c3c;
+    color: red;
     text-decoration: none;
-    font-size: 30px;
-}
-
-.like_icon:hover {
-    color: #c0392b;
-}
-
-/* Right Column - 1/3 width */
-.right_column {
-    flex: 1;
+    font-size: 20px;
 }
 
 /* Login Form */
@@ -294,7 +282,6 @@ body {
 .login_form h2 {
     color: #2c3e50;
     margin-bottom: 15px;
-    font-size: 18px;
 }
 
 .form_input {
@@ -302,17 +289,13 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .checkbox_label {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 14px;
-    color: #666;
-}
-
-.checkbox_label input {
-    margin-right: 5px;
 }
 
 .login_button {
@@ -334,16 +317,18 @@ body {
 .register_button {
     display: block;
     width: 100%;
-    background-color: #27ae60;
+    background-color: green;
     color: white;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
 
 .register_button:hover {
-    background-color: #229954;
+    background-color: darkgreen;
 }
 
 /* Sidebar Sections */
@@ -357,7 +342,6 @@ body {
 .sidebar_section h2 {
     color: #2c3e50;
     margin-bottom: 15px;
-    font-size: 18px;
 }
 
 .destinations_list,
@@ -369,14 +353,8 @@ body {
 .destinations_list li,
 .tips_list li,
 .lista-enlaces li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ecf0f1;
-}
-
-.destinations_list li:last-child,
-.tips_list li:last-child,
-.lista-enlaces li:last-child {
-    border-bottom: none;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .destinations_list a,
@@ -404,13 +382,11 @@ body {
 .footer_content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     text-align: center;
 }
 
 .copyright {
-    margin-bottom: 15px;
-    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .footer_links {
@@ -420,27 +396,21 @@ body {
 .footer_links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
+    margin: 0 10px;
 }
 
 .footer_links a:hover {
-    color: #3498db;
+    text-decoration: underline;
 }
 
 .social_icons {
     margin-bottom: 20px;
 }
 
-.social_icons a {
-    margin: 0 10px;
-}
-
 .social_icons img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
 
 .newsletter_form {
@@ -450,23 +420,179 @@ body {
 }
 
 .newsletter_input {
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 4px;
-    width: 250px;
+    width: 200px;
 }
 
 .newsletter_button {
-    padding: 10px 20px;
-    background-color: #27ae60;
+    padding: 8px 15px;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.newsletter_button:hover {
-    background-color: #229954;
+/* Pagina de Registro */
+.main.registro {
+    justify-content: center;
+}
+
+.form_page {
+    width: 600px;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form_title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form_grid {
+    margin-bottom: 15px;
+}
+
+.form_grid div {
+    margin-bottom: 15px;
+}
+
+.form_grid label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.terms {
+    margin: 15px 0;
+}
+
+.terms a {
+    color: #3498db;
+}
+
+.form_actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Version B - Usuario logueado */
+.user_panel h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.user_profile {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user_profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+/* Busqueda */
+.search_block {
+    margin-top: 10px;
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filters input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.search_row {
+    display: flex;
+    gap: 5px;
+}
+
+.search_icon {
+    padding: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Formulario de consejos */
+.advice_form {
+    margin-top: 15px;
+}
+
+.advice_form h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.advice_form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Mini calendario */
+.mini_calendar {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.cal_head {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.mini_calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mini_calendar th,
+.mini_calendar td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.mini_calendar th {
+    background-color: #e0e0e0;
+}
+
+.mini_calendar td {
+    background-color: white;
+}
+
+/* Pagina de Compra */
+.pack_detail {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.default_notice {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #666;
 }
 
 /* Responsive - Tablet */
@@ -474,21 +600,11 @@ body {
     .header {
         flex-direction: column;
         text-align: center;
-        padding: 10px;
-    }
-    
-    .header_brand {
-        margin-bottom: 10px;
     }
     
     .header_nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-    }
-    
-    .header_right {
-        margin-top: 10px;
     }
     
     .main {
@@ -497,27 +613,33 @@ body {
     
     .left_column,
     .right_column {
-        flex: 1;
         width: 100%;
     }
     
     .carousel_container {
-        flex-direction: column;
+        overflow-x: auto;
+        justify-content: flex-start;
     }
     
     .pack_item {
-        min-width: 100%;
+        min-width: 250px;
+        flex: none;
     }
     
-    .experiences_grid {
-        grid-template-columns: repeat(2, 1fr);
+    .experience_card {
+        width: 100%;
+    }
+    
+    .form_page {
+        width: 90%;
+        padding: 20px;
     }
 }
 
 /* Responsive - Mobile */
 @media (max-width: 600px) {
     .header_brand h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .header_nav ul {
@@ -525,25 +647,26 @@ body {
         gap: 5px;
     }
     
-    .header_nav a {
-        display: block;
-        padding: 5px;
+    .banner {
+        padding: 30px 20px;
     }
     
     .banner_title {
-        font-size: 24px;
+        font-size: 22px;
     }
     
-    .banner_subtitle {
-        font-size: 16px;
+    .carousel_container {
+        overflow-x: auto;
+        justify-content: flex-start;
     }
     
-    .banner {
-        padding: 40px 20px;
+    .pack_item {
+        min-width: 200px;
+        flex: none;
     }
     
     .experiences_grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
     
     .newsletter_form {
@@ -552,118 +675,7 @@ body {
     }
     
     .newsletter_input {
-        width: 90%;
+        width: 80%;
         margin-bottom: 10px;
     }
-    
-    .social_icons img {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .arrows button {
-        padding: 6px 12px;
-        font-size: 16px;
-    }
-
-}
-
-/* Registro – caja centrada y aspecto del sketch (global) */
-.main.registro { justify-content: center; }
-
-.form_page {
-    max-width: 640px;
-    margin: 0 auto;
-    border: 1px solid #cfcfcf;
-    border-radius: 0;
-}
-
-.form_page .form_input { border-radius: 0; }
-
-.registration_form .form_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 20px;
-}
-.registration_form .full { grid-column: 1 / -1; }
-
-.form_actions { text-align: right; }
-.form_page .login_button { display: inline-block; width: auto; padding: 10px 16px; }
-
-/* Registro – breakpoint tablet */
-@media (max-width: 768px) {
-    .registration_form .form_grid { grid-template-columns: 1fr; }
-}
-
-/* Versión b: pequeños estilos de la barra derecha */
-.user_panel .user_profile {
-  text-align: center;
-  margin-bottom: 12px;
-}
-.user_panel .user_profile img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-}
-
-.search_block .filters label {
-  display: inline-block;
-  margin: 0 10px 8px 0;
-  font-size: 14px;
-  color: #2c3e50;
-}
-
-.search_row { position: relative; }
-.search_row .search_icon {
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-  font-size: 14px;
-}
-.search_row .form_input { padding-left: 28px; }
-
-.mini_calendar .cal_head {
-  text-align: center;
-  color: #2c3e50;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-.mini_calendar table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  font-size: 14px;
-  background: white;
-}
-.mini_calendar th,
-.mini_calendar td {
-  border: 1px solid #ecf0f1;
-  padding: 6px;
-}
-
-
-/* Compra – pequeño ajuste de separación de acciones */
-.form_actions .purchase_button { margin-left: 0; }
-
-/* Compra – en tablet/móvil el grid del formulario a una columna (reutiliza la rejilla del registro) */
-@media (max-width: 768px) {
-  .registration_form .form_grid { grid-template-columns: 1fr; }
-}
-
-
-/* Compra – mostrar el pack seleccionado por hash (#pack-...) */
-.pack_detail { display: none; }
-.pack_detail:target { display: block; }
-
-/* Ocultar el aviso cuando hay target */
-.pack_detail:target ~ .default_notice { display: none; }
-.default_notice {
-  background: #fff;
-  padding: 12px;
-  border: 1px solid #ecf0f1;
-  color: #2c3e50;
 }
