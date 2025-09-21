@@ -124,8 +124,7 @@ body {
     margin-top: 30px;
 }
 
-.packs_head {
-    display: flex;
+.packs_head { 
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -133,6 +132,7 @@ body {
 
 .packs-title {
     color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 .arrows {
