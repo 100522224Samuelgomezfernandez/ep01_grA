@@ -114,10 +114,6 @@ body {
     text-decoration: none;
 }
 
-.banner_button:hover {
-    background-color: darkorange;
-}
-
 /* Packs Section */
 .packs {
     margin-top: 30px;
@@ -193,10 +189,6 @@ body {
     color: white;
     padding: 8px 15px;
     text-decoration: none;
-}
-
-.purchase_button:hover {
-    background-color: darkgreen;
 }
 
 /* Lower Block */
@@ -291,10 +283,6 @@ body {
     margin-bottom: 10px;
 }
 
-.login_button:hover {
-    background-color: #2980b9;
-}
-
 .register_button {
     display: block;
     width: 100%;
@@ -305,10 +293,6 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
-}
-
-.register_button:hover {
-    background-color: darkgreen;
 }
 
 /* Sidebar Sections */
