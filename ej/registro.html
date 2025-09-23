@@ -36,10 +36,10 @@
   </header>
 
   <main class="main registro">
-    <section class="login_form form_page">
+    <section class="form_page">
       <h2 class="form_title">Registro de nuevos usuarios</h2>
 
-      <form class="registration_form" action="#" method="post" enctype="multipart/form-data">
+      <form  action="#" method="post" enctype="multipart/form-data">
         <div class="form_grid">
           <div>
             <label for="nombre">Nombre</label>
@@ -61,7 +61,7 @@
             <input id="email2" name="email2" type="email" class="form_input" required>
           </div>
 
-          <div class="full">
+          <div>
             <label for="nacimiento">Fecha de nacimiento</label>
             <input id="nacimiento" name="nacimiento" type="date" class="form_input" required>
           </div>
@@ -76,9 +76,9 @@
             <input id="password" name="password" type="password" class="form_input" required>
           </div>
 
-          <div class="full">
+          <div>
             <label for="avatar">Subir imagen de perfil</label>
-            <input id="avatar" name="avatar" type="file" accept="image/*" class="form_input">
+            <input id="avatar" name="avatar" type="file" class="form_input">
           </div>
         </div>
 
@@ -91,7 +91,7 @@
 
         <div class="form_actions">
           <!-- Enlace solicitado que “envía” y navega a Versión b -->
-          <a class="login_button" href="usuario.html" role="button">Guardar datos y acceder</a>
+          <a class="login_button" href="usuario.html">Guardar datos y acceder</a>
         </div>
       </form>
     </section>
@@ -103,7 +103,7 @@
 
       <div class="footer_links">
         <a href="#">Sobre nosotros</a>
-        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="#">Política de Privacidad</a>
         <a href="#">Ayuda</a>
       </div>
 
