@@ -3,60 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventureros Unidos</title>
     <meta name="description" content="Comunidad colaborativa de viajes de aventureros de larga distancia. Explora experiencias reales, consejos, foros y packs de viaje recomendados.">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
+  <!-- CABECERA -->
   <header class="header">
     <div class="header_brand">
-        <h1><a class="header_title" href="index.html">Aventureros Unidos</a></h1>
+      <h1><a class="header_title" href="index.html">Aventureros Unidos</a></h1>
     </div>
-    
+
+    <!-- Menu de navegacion principal -->
     <nav class="header_nav">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Experiencias</a></li>
-            <li><a href="#">Consejos</a></li>
-            <li><a href="#">Foro</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Experiencias</a></li>
+        <li><a href="#">Consejos</a></li>
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
     </nav>
-    
+
+    <!-- Logo y selector de idioma -->
     <div class="header_right">
       <img src="images/logo.png" alt="Logo Aventureros" class="header_logo">
       <select class="language_selector">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
       </select>
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="main">
-    <!-- Izquierda -->
+
+    <!-- Columna Izquierda -->
     <div class="left_column">
+
       <!-- Bloque superior -->
       <section class="upper_block">
+
+        <!-- Banner -->
         <div class="banner">
           <h2 class="banner_title">Viaja lejos, gasta menos, aprende más</h2>
           <p class="banner_subtitle">Guías y experiencias reales de aventureros por América, Asia, África y Oceanía.</p>
-          <a class="banner_button" href="#">Ver packs recomendados</a>
+          <button class="banner_button">Ver packs recomendados</button>
         </div>
+        <hr>
 
-        <!-- Carrusel de Packs -->
+        <!-- Carrusel de packs -->
         <div class="packs">
+          <!-- Cabecera de carrusel -->
           <div class="packs_head">
-            <h2 class="packs-title">Packs de viaje recomendados</h2>
+            <h2 class="packs_title">Packs de viaje recomendados</h2>
             <div class="arrows">
               <button type="button" title="Anterior" >←</button>
               <button type="button" title="Siguiente" >→</button>
             </div>
           </div>
 
+          <!-- Tarjetas del carrusel -->
           <div class="carousel_container">
+            <!-- Pack Peru -->
             <article class="pack_item" id="pack-peru">
               <img src="images/pack_1.jpg" alt="Machu Picchu">
               <div class="pack_body">
@@ -67,6 +79,7 @@
               </div>
             </article>
 
+            <!-- Pack Vietnam -->
             <article class="pack_item" id="pack-vietnam">
               <img src="images/pack_2.jpg" alt="Bahía de Ha Long">
               <div class="pack_body">
@@ -77,6 +90,7 @@
               </div>
             </article>
 
+            <!-- Pack Marruecos -->
             <article class="pack_item" id="pack-marruecos">
               <img src="images/pack_3.jpg" alt="Dunas del Sahara">
               <div class="pack_body">
@@ -88,9 +102,10 @@
             </article>
           </div>
         </div>
+        <hr>
       </section>
 
-      <!-- Bloque inferior -->
+      <!-- Bloque inferior: Galeria de experiencias -->
       <section class="lower_block">
         <h2>Experiencias de la comunidad</h2>
         <div class="experiences_grid">
@@ -133,8 +148,9 @@
       </section>
     </div>
 
-    <!-- Derecha -->
+    <!-- Barra Lateral Derecha -->
     <aside class="right_column">
+      <!-- Formulario de acceso -->
       <section class="sidebar_section">
         <h2>Accede</h2>
           <form>
@@ -148,6 +164,7 @@
           <a href="registro.html" class="register_button">Registro</a>
       </section>
 
+      <!-- Lista de destinos -->
       <section class="sidebar_section">
         <h2>Top destinos mochileros</h2>
         <ul class="destinations_list">
@@ -159,6 +176,7 @@
         </ul>
       </section>
 
+      <!-- Lista de consejos -->
       <section class="sidebar_section">
         <h2>Consejos rápidos</h2>
         <ul class="tips_list">
@@ -169,12 +187,13 @@
         </ul>
       </section>
 
+      <!-- Lista de encuentros -->
       <section class="sidebar_section">
         <h2>Próximos encuentros</h2>
         <ul class="lista-enlaces">
           <li><a href="#">Senderismo – Madrid (29/09)</a></li>
-          <li><a href="#">Cine-foro – Sevilla (05/10)</a></li>
-          <li><a href="#">Taller de mochilas – Barcelona (12/10)</a></li>
+          <li><a href="#">Ruta urbana – Lisboa (15/11)</a></li>
+          <li><a href="#">Camping – Pirineos (20/11)</a></li>
         </ul>
       </section>
     </aside>
@@ -190,13 +209,15 @@
         <a href="#">Política de Privacidad</a>
         <a href="#">Ayuda</a>
       </div>
-      
+
+      <!-- Iconos de redes sociales -->
       <div class="social_icons">
         <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a> 
         <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a> 
         <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a> 
       </div>
       
+      <!-- Formulario newsletter -->
       <div class="newsletter_form">
         <input type="email" placeholder="Tu email" class="newsletter_input">
         <button class="newsletter_button">Suscribir</button>

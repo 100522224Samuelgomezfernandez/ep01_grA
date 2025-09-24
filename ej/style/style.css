@@ -1,4 +1,4 @@
-/* Reset basico */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -40,10 +40,6 @@ body {
     text-decoration: none;
 }
 
-.header_nav a:hover {
-    text-decoration: underline;
-}
-
 .header_right {
     display: flex;
     align-items: center;
@@ -57,7 +53,6 @@ body {
 
 .language_selector {
     padding: 5px;
-    border-radius: 4px;
 }
 
 /* Main Container */
@@ -107,23 +102,24 @@ body {
 }
 
 .banner_button {
-    display: inline-block;
     background-color: orange;
     color: white;
     padding: 10px 20px;
-    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
 }
 
 /* Packs Section */
 .packs {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .packs_head {
     margin-bottom: 20px;
 }
 
-.packs-title {
+.packs_title {
     color: navy;
 }
 
@@ -156,7 +152,7 @@ body {
 
 .pack_item img {
     width: 100%;
-    height: auto;
+    height: 150px;
     object-fit: cover;
 }
 
@@ -195,7 +191,6 @@ body {
 /* Lower Block */
 .lower_block {
     padding: 20px;
-    border-top: 1px solid #d4d4d4;
 }
 
 .lower_block h2 {
@@ -217,7 +212,7 @@ body {
 
 .experience_card img {
     width: 100%;
-    height: auto;
+    height: 200px;
 }
 
 .experience_card h3 {
@@ -561,6 +556,10 @@ body {
         width: 100%;
     }
 
+    .pack_item img {
+        height: auto;
+    }
+
     .form_page {
         width: 100%;
         padding: 20px;
@@ -592,6 +591,10 @@ body {
 
     .experience_card {
         width: 100%;
+    }
+
+    .experience_card img {
+        height: auto;
     }
     
     .newsletter_form {
