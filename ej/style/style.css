@@ -248,13 +248,13 @@ body {
 }
 
 /* Login Form */
-.login_form {
+.sidebar_section {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-.login_form h2, .sidebar_section h2 {
+.sidebar_section h2 {
     color: navy;
     margin-bottom: 15px;
 }
@@ -262,20 +262,18 @@ body {
 .form_input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #d4d4d4;
+    margin: 10px 0 10px 1px;
+    border: 1px solid black;
 }
 
 .checkbox_label {
     display: block;
     margin-bottom: 10px;
     font-size: 14px;
-    color: gray;
 }
 
 .login_button {
     display: block;
-    width: 100%;
     background-color: blue;
     color: white;
     padding: 10px;
@@ -286,20 +284,12 @@ body {
 
 .register_button {
     display: block;
-    width: 100%;
     background-color: green;
     color: white;
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    border: none;
     cursor: pointer;
-}
-
-.sidebar_section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
 }
 
 .destinations_list,
@@ -311,22 +301,14 @@ body {
 .destinations_list li,
 .tips_list li,
 .lista-enlaces li {
-    padding: 5px 0;
-    border-bottom: 1px solid #d4d4d4;
+    padding: 5px 0 5px 0;
 }
 
 .destinations_list a,
 .tips_list a,
 .lista-enlaces a {
     color: blue;
-    text-decoration: none;
     font-size: 14px;
-}
-
-.destinations_list a:hover,
-.tips_list a:hover,
-.lista-enlaces a:hover {
-    text-decoration: underline;
 }
 
 /* Footer */
@@ -436,7 +418,7 @@ body {
 }
 
 /* Version B - Usuario logueado */
-.user_panel h2 {
+.user_name {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -467,14 +449,13 @@ body {
 
 .search_row {
     display: flex;
-    gap: 5px;
 }
 
 .search_row img {
     width: 25px;
     height: 25px;
-    padding: 5px;
-    margin-top: 5px;
+    padding: 3px;
+    margin-top: 15px;
 }
 
 /* Formulario de consejos */
@@ -482,26 +463,13 @@ body {
     margin-top: 15px;
 }
 
-.advice_form h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: navy;
-}
-
-.advice_form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #d4d4d4;
-    margin-bottom: 10px;
-}
-
 .mini_calendar {
     padding: 10px;
 }
 
-.cal_head {
+.mini_calendar h3 {
     text-align: center;
-    font-weight: bold;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -514,7 +482,7 @@ body {
 .mini_calendar td {
     text-align: center;
     padding: 5px;
-    border: 1px solid #d4d4d4;
+    border: 1px solid;
     font-size: 12px;
 }
 
@@ -561,7 +529,6 @@ body {
     background-color: blue;
     color: white;
     padding: 8px 15px;
-    text-decoration: none;
     cursor: pointer;
 }
 
