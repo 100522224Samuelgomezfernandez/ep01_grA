@@ -156,7 +156,7 @@ body {
 
 .pack_item img {
     width: 100%;
-    height: 150px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -217,7 +217,7 @@ body {
 
 .experience_card img {
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 
 .experience_card h3 {
@@ -507,7 +507,7 @@ body {
 
 .pack_item_purchase img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -554,22 +554,15 @@ body {
     }
     
     .carousel_container {
-        overflow-x: auto;
-        justify-content: flex-start;
         flex-direction: column;
     }
-    
+
     .pack_item {
-        min-width: 250px;
-        flex: none;
-    }
-    
-    .experience_card {
         width: 100%;
     }
-    
+
     .form_page {
-        width: 90%;
+        width: 100%;
         padding: 20px;
     }
 }
@@ -593,28 +586,16 @@ body {
         font-size: 22px;
     }
     
-    .carousel_container {
-        overflow-x: auto;
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-    
-    .pack_item {
-        min-width: 200px;
-        flex: none;
-    }
-    
     .experiences_grid {
         flex-direction: column;
+    }
+
+    .experience_card {
+        width: 100%;
     }
     
     .newsletter_form {
         flex-direction: column;
         align-items: center;
-    }
-    
-    .newsletter_input {
-        width: 80%;
-        margin-bottom: 10px;
     }
 }
