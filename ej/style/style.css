@@ -132,7 +132,6 @@ body {
 .arrows button {
     background-color: blue;
     color: white;
-    border: none;
     padding: 10px 15px;
     cursor: pointer;
 }
@@ -186,6 +185,7 @@ body {
     padding: 8px 15px;
     text-decoration: none;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 /* Lower Block */
@@ -232,7 +232,7 @@ body {
     padding: 5px 10px;
     text-decoration: none;
     font-size: 14px;
-    border: none;
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -275,6 +275,9 @@ body {
     text-align: center;
     text-decoration: none;
     margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid black;
 }
 
 .register_button {
@@ -285,6 +288,7 @@ body {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .destinations_list,
@@ -364,7 +368,6 @@ body {
     padding: 8px 15px;
     background-color: green;
     color: white;
-    border: none;
     cursor: pointer;
 }
 
