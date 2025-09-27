@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Aventureros Unidos</title>
-    <meta name="description" content="Registro de nuevos usuarios en Aventureros Unidos.">
-    <link rel="stylesheet" href="style/style.css">
+  <!-- Registro: página registro nuevo usuario (versión A) -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Aventureros Unidos</title>
+  <meta name="description" content="Registro de nuevos usuarios en Aventureros Unidos.">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
+  <!-- Cabecera del sitio -->
   <header class="header">
+    <!-- Marca y título -->
     <div class="header_brand">
       <h1><a class="header_title" href="index.html">Aventureros Unidos</a></h1>
     </div>
 
+    <!-- Menu de navegacion principal -->
     <nav class="header_nav">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Inicio</a></li>
         <li><a href="#">Experiencias</a></li>
         <li><a href="#">Consejos</a></li>
         <li><a href="#">Foro</a></li>
@@ -25,6 +28,7 @@
       </ul>
     </nav>
 
+    <!-- Logo + selector de idioma -->
     <div class="header_right">
       <img src="images/logo.png" alt="Logo Aventureros" class="header_logo">
       <select class="language_selector">
@@ -35,10 +39,12 @@
     </div>
   </header>
 
+  <!-- Contenido principal -->
   <main class="main registro">
     <section class="form_page">
       <h2 class="form_title">Registro de nuevos usuarios</h2>
 
+      <!-- Formulario de registro (simulado, no funcional) -->
       <form  action="#" method="post">
         <div class="form_grid">
           <div>
@@ -82,6 +88,7 @@
           </div>
         </div>
 
+        <!-- Aceptación de política de privacidad -->
         <p class="terms">
           <label>
             <input type="checkbox" required>
@@ -89,6 +96,7 @@
           </label>
         </p>
 
+        <!-- Acción: simula envío y navegación a Versión b -->
         <div class="form_actions">
           <a class="login_button" href="usuario.html">Guardar datos y acceder</a>
         </div>
@@ -96,22 +104,27 @@
     </section>
   </main>
 
+  <!-- Pie de página -->
   <footer class="footer">
     <div class="footer_content">
+      <!-- Copyright -->
       <p class="copyright">© 2025 Aventureros Unidos</p>
 
+      <!-- Enlaces de pie de página -->
       <div class="footer_links">
         <a href="#">Sobre nosotros</a>
         <a href="#">Política de Privacidad</a>
         <a href="#">Ayuda</a>
       </div>
 
+      <!-- Iconos de redes sociales -->
       <div class="social_icons">
-        <a href="#"><img src="images/instagram.jpg" alt="Logo Instagram"></a>
-        <a href="#"><img src="images/tiktok.png" alt="Logo TikTok"></a>
-        <a href="#"><img src="images/youtube.jpg" alt="Logo Youtube"></a>
+        <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
       </div>
 
+      <!-- Formulario newsletter -->
       <div class="newsletter_form">
         <input type="email" placeholder="Tu email" class="newsletter_input">
         <button class="newsletter_button">Suscribir</button>

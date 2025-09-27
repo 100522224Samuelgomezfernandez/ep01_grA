@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario | Aventureros Unidos</title>
-    <meta name="description" content="Página de usuario con filtros de experiencias y últimas novedades.">
-    <link rel="stylesheet" href="style/style.css">
+  <!-- Usuario: pagina usuario registrado (versión B) -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuario | Aventureros Unidos</title>
+  <meta name="description" content="Página de usuario con filtros de experiencias y últimas novedades.">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
+  <!-- Cabecera del sitio -->
   <header class="header">
+    <!-- Marca y título -->
     <div class="header_brand">
       <h1><a class="header_title" href="index.html">Aventureros Unidos</a></h1>
     </div>
 
+    <!-- Menu de navegacion principal -->
     <nav class="header_nav">
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -25,6 +28,7 @@
       </ul>
     </nav>
 
+    <!-- Logo + selector de idioma -->
     <div class="header_right">
       <img src="images/logo.png" alt="Logo Aventureros" class="header_logo">
       <select class="language_selector">
@@ -35,17 +39,27 @@
     </div>
   </header>
 
+  <!-- Contenido principal -->
   <main class="main">
+
     <!-- Columna izquierda -->
     <div class="left_column">
+
+      <!-- Bloque superior -->
       <section class="upper_block">
+
+        <!-- Banner -->
         <div class="banner">
           <h2 class="banner_title">Viaja lejos, gasta menos, aprende más</h2>
           <p class="banner_subtitle">Guías y experiencias reales de aventureros por América, Asia, África y Oceanía.</p>
           <button class="banner_button">Ver packs recomendados</button>
         </div>
+        <!-- Separador visual -->
         <hr>
+
+        <!-- Carrusel de packs -->
         <div class="packs">
+          <!-- Cabecera de carrusel -->
           <div class="packs_head">
             <h2 class="packs_title">Packs de viaje recomendados</h2>
             <div class="arrows">
@@ -54,7 +68,9 @@
             </div>
           </div>
 
+          <!-- Tarjetas del carrusel -->
           <div class="carousel_container">
+            <!-- Pack Peru -->
             <article class="pack_item" id="pack-peru">
               <img src="images/pack_1.jpg" alt="Machu Picchu">
               <div class="pack_body">
@@ -65,6 +81,7 @@
               </div>
             </article>
 
+            <!-- Pack Vietnam -->
             <article class="pack_item" id="pack-vietnam">
               <img src="images/pack_2.jpg" alt="Bahía de Ha Long">
               <div class="pack_body">
@@ -75,6 +92,7 @@
               </div>
             </article>
 
+            <!-- Pack Marruecos -->
             <article class="pack_item" id="pack-marruecos">
               <img src="images/pack_3.jpg" alt="Dunas del Sahara">
               <div class="pack_body">
@@ -86,9 +104,11 @@
             </article>
           </div>
         </div>
+        <!-- Separador visual -->
         <hr>
       </section>
 
+      <!-- Bloque inferior: Galeria de experiencias -->
       <section class="lower_block">
         <h2>Experiencias de la comunidad</h2>
         <div class="experiences_grid">
@@ -131,19 +151,20 @@
       </section>
     </div>
 
-    <!-- Columna derecha: versión b -->
+    <!-- Barra lateral derecha -->
     <aside class="right_column">
 
-      <!-- Panel de usuario (simulado) -->
+      <!-- Panel de usuario -->
       <section class="sidebar_section">
         <h2 class="user_name">Juan García</h2>
         <div class="user_profile">
           <img src="images/perfil.jpg" alt="Imagen de perfil">
         </div>
+        <!-- Botón no funcional -->
         <button class="login_button">Cerrar sesión</button>
       </section>
 
-      <!-- Busca experiencias -->
+      <!-- Busca experiencias (filtros) -->
       <section class="sidebar_section">
         <h2>Busca experiencias</h2>
         <form class="search_block">
@@ -154,6 +175,7 @@
             <label><input type="checkbox"> Desierto</label>
           </div>
           <div class="search_row">
+            <!-- Icono lupa -->
             <img src="images/lupa.png" alt="Lupa">
             <input type="text" class="form_input" placeholder="Buscar">
           </div>
@@ -178,6 +200,7 @@
         </form>
       </section>
 
+      <!-- Calendario estático -->
       <section class="sidebar_section">
         <h2>Calendario</h2>
         <div class="mini_calendar">
@@ -204,29 +227,35 @@
           </table>
         </div>
       </section>
-
     </aside>
   </main>
 
+  <!-- Pie de página -->
   <footer class="footer">
     <div class="footer_content">
+      <!-- Copyright -->
       <p class="copyright">© 2025 Aventureros Unidos</p>
+
+      <!-- Enlaces de pie de página -->
       <div class="footer_links">
         <a href="#">Sobre nosotros</a>
         <a href="#">Política de Privacidad</a>
         <a href="#">Ayuda</a>
       </div>
+
+      <!-- Iconos de redes sociales -->
       <div class="social_icons">
         <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
         <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
         <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
       </div>
+
+      <!-- Formulario newsletter -->
       <div class="newsletter_form">
         <input type="email" placeholder="Tu email" class="newsletter_input">
         <button class="newsletter_button">Suscribir</button>
       </div>
     </div>
   </footer>
-
 </body>
 </html>

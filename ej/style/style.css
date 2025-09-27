@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Estilo base */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
-/* Header */
+/* Header: Cabecera */
 .header {
     background-color: navy;
     color: white;
@@ -55,7 +56,7 @@ body {
     padding: 5px;
 }
 
-/* Main Container */
+/* Contenedor Principal: ancho máximo y grid de 2 columnas */
 .main {
     max-width: 1200px;
     margin: 20px auto;
@@ -64,23 +65,23 @@ body {
     padding: 0 20px;
 }
 
-/* Left Column */
+/* Columna izquierda (2/3) */
 .left_column {
     width: 66%;
     background-color: white;
 }
 
-/* Right Column */
+/* Columna derecha (1/3) */
 .right_column {
     width: 34%;
 }
 
-/* Upper Block */
+/* Bloque superior de la columna izquierda */
 .upper_block {
     padding: 20px;
 }
 
-/* Banner */
+/* Banner de portada con imagen de fondo */
 .banner {
     background: url('../images/banner.jpg');
     background-size: cover;
@@ -109,7 +110,7 @@ body {
     font-size: 15px;
 }
 
-/* Packs Section */
+/* Packs: cabecera + carrusel */
 .packs {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -136,7 +137,7 @@ body {
     cursor: pointer;
 }
 
-/* Carousel */
+/* Carrusel: tarjetas en fila */
 .carousel_container {
     display: flex;
     gap: 15px;
@@ -152,7 +153,6 @@ body {
 .pack_item img {
     width: 100%;
     height: 150px;
-    object-fit: cover;
 }
 
 .pack_body {
@@ -188,7 +188,7 @@ body {
     border: 1px solid black;
 }
 
-/* Lower Block */
+/* Bloque inferior: grid de experiencias */
 .lower_block {
     padding: 20px;
 }
@@ -198,14 +198,16 @@ body {
     margin-bottom: 20px;
 }
 
-/* Experiences Grid */
+/* Grid de experiencias */
 .experiences_grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Tarjeta de experiencia: 2 por fila */
 .experience_card {
+    /* Mitad del contenedor menos 10px para compensar el gap (20px total) */
     width: calc(50% - 10px);
     border: 1px solid #d4d4d4;
 }
@@ -242,7 +244,7 @@ body {
     font-size: 20px;
 }
 
-/* Login Form */
+/* Secciones de la barra lateral y formularios */
 .sidebar_section {
     background-color: white;
     padding: 20px;
@@ -310,7 +312,7 @@ body {
     font-size: 14px;
 }
 
-/* Footer */
+/* Pie de Página: footer */
 .footer {
     background-color: navy;
     color: white;
@@ -371,7 +373,7 @@ body {
     cursor: pointer;
 }
 
-/* Pagina de Registro */
+/* Pagina de Registro (versión A) */
 .main.registro {
     justify-content: center;
 }
@@ -415,7 +417,7 @@ body {
     margin-top: 20px;
 }
 
-/* Version B - Usuario logueado */
+/* Página usuario logueado (versión B) */
 .user_name {
     text-align: center;
     margin-bottom: 10px;
@@ -488,7 +490,7 @@ body {
     background-color: gray;
 }
 
-/* Pagina de Compra */
+/* Página de Compra (versión C) */
 .pack_detail { 
     display: none; 
 }
@@ -512,6 +514,7 @@ body {
 .pack_description {
     padding: 20px;
 }
+
 .pack_description p, .pack_description ul li {
     font-size: 14px;
     margin-bottom: 10px;
@@ -530,7 +533,7 @@ body {
     cursor: pointer;
 }
 
-/* Responsive - Tablet */
+/* Responsive - Tablet (<=768px): columnas apiladas y carrusel vertical */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -569,7 +572,7 @@ body {
     }
 }
 
-/* Responsive - Mobile */
+/* Responsive - Mobile (<=600px): tipografía/espaciados más compactos */
 @media (max-width: 600px) {
     .header_brand h1 {
         font-size: 18px;
