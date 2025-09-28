@@ -56,9 +56,9 @@ body {
     padding: 5px;
 }
 
-/* Contenedor Principal: ancho máximo y grid de 2 columnas */
+/* Contenedor Principal (2 columnas con Flex) */
 .main {
-    max-width: 1200px;
+    max-width: 1200px;  /* limita la longitud de línea para legibilidad */
     margin: 20px auto;
     display: flex;
     gap: 20px;
@@ -563,7 +563,7 @@ body {
     }
 
     .pack_item img {
-        height: auto;
+        height: auto;   /* ajusta la altura correcta de la imagen, evitando que se deforme */
     }
 
     .form_page {
