@@ -492,10 +492,10 @@ body {
 
 /* Página de Compra (versión C) */
 .pack_detail { 
-    display: none; 
+    display: none;  /* Oculto por defecto, se muestra solo el seleccionado */
 }
 .pack_detail:target { 
-    display: block; 
+    display: block;     /* Muestra el pack cuyo ID coincide con el hash de la URL */
     margin-bottom: 20px;
 }
 
