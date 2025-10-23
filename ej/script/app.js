@@ -2,6 +2,7 @@
   app.js - logica  para la practica 2 de intefaces
 */
 (function () {
+  // claves de storage que uso por comodidad, asi no me lio mas tarde
   const STORAGE_KEYS = {
     users: 'iu_users',
     session: 'iu_session',
@@ -12,6 +13,7 @@
   const carousels = {};
 
   $(document).ready(function () {
+    // cuando toda la pagina esta lista engancho los scripts segun la pagina
     setupCarousels();
     const page = $('body').data('page');
 
@@ -27,6 +29,7 @@
   });
 
   function setupCarousels() {
+    // activo cada carrusel que encuentre, siempre hay minimo 3 packs
     $('.packs[data-carousel]').each(function () {
       const $block = $(this);
       const carouselId = $block.data('carousel');
@@ -47,17 +50,20 @@
     });
 
     $('.carousel_next').on('click', function () {
+      // flecha de la derecha avanza uno
       const id = $(this).data('carousel');
       moveCarousel(id, 1);
     });
 
     $('.carousel_prev').on('click', function () {
+      // flecha izquierda retrocede uno
       const id = $(this).data('carousel');
       moveCarousel(id, -1);
     });
   }
 
   function moveCarousel(id, direction) {
+    // mueve al siguiente pack de forma ciclica
     const state = carousels[id];
     if (!state) {
       return;
@@ -70,6 +76,7 @@
   }
 
   function startCarousel(id) {
+    // temporizador de 2 seg que se va repitiendo
     const state = carousels[id];
     if (!state) {
       return;
@@ -85,6 +92,7 @@
   }
 
   function initHome() {
+    // login de la home. solo revisa datos con lo guardado
     const $form = $('#loginForm');
     const $user = $('#loginUser');
     const $pass = $('#loginPass');
@@ -102,6 +110,7 @@
   }
 
   function handleLogin($form, $user, $pass) {
+    // comprobaciones basicas para iniciar sesion
     clearFormErrors($form);
 
     const userValue = ($user.val() || '').trim();
@@ -134,6 +143,7 @@
   }
 
   function initRegister() {
+    // registro: activa/desactiva boton y escucha submit
     const $form = $('#registroForm');
     const $privacy = $('#acepto');
     const $submit = $('#btnRegistro');
@@ -151,10 +161,12 @@
   }
 
   function toggleSubmit($button, enabled) {
+    // si no acepta la privacidad, el boton se queda deshabilitado
     $button.prop('disabled', !enabled);
   }
 
   function handleRegister($form) {
+    // valida todos los campos del formulario de registro
     clearFormErrors($form);
 
     const nombre = ($('#nombre').val() || '').trim();
@@ -255,6 +267,7 @@
     };
 
     reader.onerror = function () {
+      // alguna vez falla el filereader, asi se avisa
       alert('Hubo un fallo leyendo la imagen, prueba otra vez.');
     };
 
@@ -262,6 +275,7 @@
   }
 
   function initUser() {
+    // proteccion de la pagina de usuario, si no hay sesion te echa
     const session = getSession();
     if (!session) {
       alert('Debes iniciar sesión antes de entrar aquí.');
@@ -279,12 +293,14 @@
       return;
     }
 
+    // muestra nombre + apellidos y el avatar que subio
     $('#userName').text(current.nombre + ' ' + current.apellidos);
     if (current.avatar) {
       $('#userAvatar').attr('src', current.avatar);
     }
 
     $('#logoutButton').on('click', function () {
+      // confirmacion de cerrar sesion, como pide el enunciado
       const sure = confirm('¿Desea cerrar sesión?');
       if (sure) {
         clearSession();
@@ -301,6 +317,7 @@
   }
 
   function renderAdvices() {
+    // pinta como mucho los 3 ultimos consejos guardados
     const $list = $('#latestTipsList');
     $list.empty();
 
@@ -322,6 +339,7 @@
   }
 
   function handleAdviceSubmit($form, author) {
+    // cuando un user manda un consejo lo validamos y guardamos en local storage
     const $title = $('#adviceTitle');
     const $desc = $('#adviceDesc');
 
@@ -364,6 +382,7 @@
   }
 
   function initPurchase() {
+    // pagina de compra, controla que pack se muestra y el submit
     const $form = $('#compraForm');
     showPackFromHash();
 
@@ -382,6 +401,7 @@
   }
 
   function showPackFromHash() {
+    // se fija en el hash y muestra el pack correspondiente
     const hash = window.location.hash || '#pack-peru';
     $('.pack_detail').removeClass('active');
 
@@ -394,6 +414,7 @@
   }
 
   function handlePurchase($form) {
+    // validaciones del pago segun el enunciado, sin pasarse de listos
     clearFormErrors($form);
 
     const name = ($('#purchaseName').val() || '').trim();
@@ -451,11 +472,13 @@
   }
 
   function isValidEmail(email) {
+    // chequeo basico de email, suficiente para la practica
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 
   function isValidBirthDate(value) {
+    // revisa que la fecha exista, no sea muy antigua ni futura
     const date = new Date(value + 'T00:00:00');
     if (Number.isNaN(date.getTime())) {
       return false;
@@ -475,6 +498,7 @@
   }
 
   function isValidPassword(password) {
+    // pasword fuerte segun lo pedido: 8 chars, 2 numeros, 1 especial, mayus y minus
     if (password.length < 8) {
       return false;
     }
@@ -488,6 +512,7 @@
   }
 
   function isValidExpiry(value) {
+    // la fecha de caducidad debe ser del mes actual o a futuro
     if (!value) {
       return false;
     }
@@ -519,10 +544,12 @@
   }
 
   function clearFormErrors($form) {
+    // quita la clase rojo de errores
     $form.find('.form_input').removeClass('error');
   }
 
   function markError($input, hasError) {
+    // marca un campo rojo si hay algun fallo
     if (!$input || $input.length === 0) {
       return;
     }
@@ -534,6 +561,7 @@
   }
 
   function loadUsers() {
+    // leo usuarios del local storage, si algo truena devuelvo objeto vacio
     const raw = window.localStorage.getItem(STORAGE_KEYS.users);
     if (!raw) {
       return {};
@@ -548,22 +576,27 @@
   }
 
   function saveUsers(users) {
+    // guardo todos los usuarios a la vez (no hay servidor, asi que toca asi)
     window.localStorage.setItem(STORAGE_KEYS.users, JSON.stringify(users));
   }
 
   function setSession(login) {
+    // guardo la sesion actual, luego sirve para bloquear paginas
     window.localStorage.setItem(STORAGE_KEYS.session, login);
   }
 
   function getSession() {
+    // devuelve el login guardado si existe
     return window.localStorage.getItem(STORAGE_KEYS.session);
   }
 
   function clearSession() {
+    // elimina la sesion, se usa al cerrar o si esta corrupta
     window.localStorage.removeItem(STORAGE_KEYS.session);
   }
 
   function loadAdvices() {
+    // lee lista de consejos de storage
     const raw = window.localStorage.getItem(STORAGE_KEYS.advices);
     if (!raw) {
       return [];
@@ -582,10 +615,12 @@
   }
 
   function saveAdvices(entries) {
+    // guarda la lista entera de consejos
     window.localStorage.setItem(STORAGE_KEYS.advices, JSON.stringify(entries));
   }
 
   function escapeHtml(str) {
+    // pequeño helper por si acaso alguien mete tags raras en el titulo
     return str.replace(/[&<>'"]/g, function (ch) {
       const map = {
         '&': '&amp;',
