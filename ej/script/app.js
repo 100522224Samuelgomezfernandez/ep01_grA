@@ -5,7 +5,6 @@
   const STORAGE_KEYS = {
     users: 'iu_users',
     session: 'iu_session',
-    remember: 'iu_remember',
     advices: 'iu_consejos'
   };
 
@@ -89,32 +88,24 @@
     const $form = $('#loginForm');
     const $user = $('#loginUser');
     const $pass = $('#loginPass');
-    const $remember = $('#rememberUser');
-
-    const storedRemember = window.localStorage.getItem(STORAGE_KEYS.remember);
-    if (storedRemember) {
-      $user.val(storedRemember);
-      $remember.prop('checked', true);
-    }
 
     $('#btnLogin').on('click', function () {
-      handleLogin($form, $user, $pass, $remember);
+      handleLogin($form, $user, $pass);
     });
 
     $form.on('keypress', function (evt) {
       if (evt.key === 'Enter') {
         evt.preventDefault();
-        handleLogin($form, $user, $pass, $remember);
+        handleLogin($form, $user, $pass);
       }
     });
   }
 
-  function handleLogin($form, $user, $pass, $remember) {
+  function handleLogin($form, $user, $pass) {
     clearFormErrors($form);
 
     const userValue = ($user.val() || '').trim();
     const passValue = ($pass.val() || '').trim();
-    const remember = $remember.is(':checked');
 
     if (!userValue || !passValue) {
       markError($user, !userValue);
@@ -137,12 +128,6 @@
     }
 
     setSession(userValue);
-
-    if (remember) {
-      window.localStorage.setItem(STORAGE_KEYS.remember, userValue);
-    } else {
-      window.localStorage.removeItem(STORAGE_KEYS.remember);
-    }
 
     alert('Inicio de sesión correcto.');
     window.location.href = 'usuario.html';
@@ -234,6 +219,7 @@
       if (IMAGE_TYPES.indexOf(file.type) === -1) {
         errors.push('Formato de imagen no permitido.');
         markError($('#avatar'), true);
+        fileInput.value = '';
       }
     }
 
@@ -328,7 +314,7 @@
       const safeTitle = escapeHtml(advice.title);
       const $item = $('<li></li>');
       const $link = $('<a></a>');
-      $link.attr('href', 'consejo.html?id=' + advice.id);
+      $link.attr('href', '#');
       $link.text(safeTitle);
       $item.append($link);
       $list.append($item);
