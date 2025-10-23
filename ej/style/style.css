@@ -138,16 +138,21 @@ body {
 }
 
 /* Carrusel: tarjetas en fila */
+
 .carousel_container {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
+    position: relative;
+    min-height: 330px;
 }
 
 .pack_item {
-    flex: 1;
+    display: none;
     border: 1px solid #d4d4d4;
     overflow: hidden;
+    width: 100%;
+}
+
+.pack_item.active {
+    display: block;
 }
 
 .pack_item img {
@@ -263,6 +268,14 @@ body {
     border: 1px solid black;
 }
 
+.form_input.error {
+    border-color: red;
+}
+
+.hidden {
+    display: none !important;
+}
+
 .checkbox_label {
     display: block;
     margin-bottom: 10px;
@@ -280,6 +293,13 @@ body {
     cursor: pointer;
     width: 100%;
     border: 1px solid black;
+}
+
+.login_button:disabled,
+.register_button:disabled,
+.purchase_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .register_button {
@@ -496,6 +516,10 @@ body {
 }
 .pack_detail:target { 
     display: block;     /* Muestra el pack cuyo ID coincide con el hash de la URL */
+    margin-bottom: 20px;
+}
+.pack_detail.active {
+    display: block;
     margin-bottom: 20px;
 }
 

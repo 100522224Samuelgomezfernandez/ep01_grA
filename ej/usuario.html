@@ -9,7 +9,7 @@
   <meta name="description" content="Página de usuario con filtros de experiencias y últimas novedades.">
   <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body data-page="user">
   <!-- Cabecera del sitio -->
   <header class="header">
     <!-- Marca y título -->
@@ -58,13 +58,13 @@
         <hr>
 
         <!-- Carrusel de packs -->
-        <div class="packs">
+  <div class="packs" data-carousel="user">
           <!-- Cabecera de carrusel -->
           <div class="packs_head">
             <h2 class="packs_title">Packs de viaje recomendados</h2>
             <div class="arrows">
-              <button type="button">←</button>
-              <button type="button">→</button>
+              <button type="button" class="carousel_prev" data-carousel="user">←</button>
+              <button type="button" class="carousel_next" data-carousel="user">→</button>
             </div>
           </div>
 
@@ -157,12 +157,12 @@
 
       <!-- Panel de usuario -->
       <section class="sidebar_section">
-        <h2 class="user_name">Juan García</h2>
+        <h2 id="userName" class="user_name">Usuario</h2>
         <div class="user_profile">
-          <img src="images/perfil.jpg" alt="Imagen de perfil">
+          <img id="userAvatar" src="images/perfil.jpg" alt="Imagen de perfil">
         </div>
         <!-- Botón no funcional -->
-        <button class="login_button">Cerrar sesión</button>
+        <button type="button" id="logoutButton" class="login_button">Cerrar sesión</button>
       </section>
 
       <!-- Busca experiencias (filtros) -->
@@ -186,18 +186,13 @@
       <!-- Últimos consejos + formulario -->
       <section class="sidebar_section">
         <h2>Últimos consejos</h2>
-        <ul class="tips_list">
-          <li><a href="#">Cómo encontrar vuelos baratos</a></li>
-          <li><a href="#">Comida callejera segura</a></li>
-          <li><a href="#">Qué llevar en el botiquín</a></li>
-          <li><a href="#">Evitar estafas comunes</a></li>
-        </ul>
+        <ul id="latestTipsList" class="tips_list"></ul>
 
-        <form class="advice_form">
+        <form id="adviceForm" class="advice_form">
           <h2>¿Tienes algún consejo?</h2>
-          <input type="text" class="form_input" placeholder="Título">
-          <textarea class="form_input" rows="3" placeholder="Escribe tu consejo"></textarea>
-          <button type="submit" class="register_button">Enviar</button>
+          <input id="adviceTitle" type="text" class="form_input" placeholder="Título">
+          <textarea id="adviceDesc" class="form_input" rows="3" placeholder="Escribe tu consejo"></textarea>
+          <button type="submit" id="btnAddAdvice" class="register_button">Enviar</button>
         </form>
       </section>
 
@@ -258,5 +253,7 @@
       </div>
     </div>
   </footer>
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="script/app.js"></script>
 </body>
 </html>

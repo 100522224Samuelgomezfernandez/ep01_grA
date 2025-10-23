@@ -9,7 +9,7 @@
   <meta name="description" content="Registro de nuevos usuarios en Aventureros Unidos.">
   <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body data-page="register">
   <!-- Cabecera del sitio -->
   <header class="header">
     <!-- Marca y título -->
@@ -44,26 +44,26 @@
     <section class="form_page">
       <h2 class="form_title">Registro de nuevos usuarios</h2>
 
-      <!-- Formulario de registro (simulado, no funcional) -->
-      <form  action="#" method="post">
+      <!-- Formulario de registro -->
+      <form id="registroForm" action="#" method="post" novalidate>
         <div class="form_grid">
           <div>
-            <label for="nombre">Nombre</label>
+            <label for="nombre">Nombre*</label>
             <input id="nombre" name="nombre" type="text" class="form_input" required>
           </div>
 
           <div>
-            <label for="apellidos">Apellidos</label>
+            <label for="apellidos">Apellidos*</label>
             <input id="apellidos" name="apellidos" type="text" class="form_input" required>
           </div>
 
           <div>
-            <label for="email">Correo electrónico</label>
+            <label for="email">Correo electrónico*</label>
             <input id="email" name="email" type="email" class="form_input" required>
           </div>
 
           <div>
-            <label for="email2">Confirmar correo</label>
+            <label for="email2">Confirmar correo*</label>
             <input id="email2" name="email2" type="email" class="form_input" required>
           </div>
 
@@ -73,32 +73,32 @@
           </div>
 
           <div>
-            <label for="login">Login</label>
+            <label for="login">Login*</label>
             <input id="login" name="login" type="text" class="form_input" required>
           </div>
 
           <div>
-            <label for="password">Password</label>
+            <label for="password">Password*</label>
             <input id="password" name="password" type="password" class="form_input" required>
           </div>
 
           <div>
-            <label for="avatar">Subir imagen de perfil</label>
-            <input id="avatar" name="avatar" type="file" class="form_input">
+            <label for="avatar">Subir imagen de perfil*</label>
+            <input id="avatar" name="avatar" type="file" class="form_input" accept="image/webp,image/png,image/jpg,image/jpeg" required>
           </div>
         </div>
 
         <!-- Aceptación de política de privacidad -->
         <p class="terms">
-          <label>
-            <input type="checkbox" required>
+          <label for="acepto">
+            <input id="acepto" type="checkbox" required>
             Acepto la <a href="privacidad.html">Política de privacidad</a>
           </label>
         </p>
 
         <!-- Acción: simula envío y navegación a Versión b -->
         <div class="form_actions">
-          <a class="login_button" href="usuario.html">Guardar datos y acceder</a>
+          <button type="submit" id="btnRegistro" class="login_button">Guardar datos y acceder</button>
         </div>
       </form>
     </section>
@@ -131,5 +131,7 @@
       </div>
     </div>
   </footer>
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="script/app.js"></script>
 </body>
 </html>

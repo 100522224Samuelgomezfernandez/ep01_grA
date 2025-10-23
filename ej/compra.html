@@ -9,7 +9,7 @@
   <meta name="description" content="Comprar pack de viaje seleccionado.">
   <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body data-page="purchase">
   <!-- Cabecera del sitio -->
   <header class="header">
     <!-- Marca y título -->
@@ -150,21 +150,21 @@
         <h2>Formulario de compra</h2>
 
         <!-- Campos solicitados -->
-        <form action="#" method="post">
+        <form id="compraForm" action="#" method="post" novalidate>
           <div class="form_grid">
             <div>
-              <label for="nombre">Nombre completo</label>
-              <input id="nombre" name="nombre" type="text" class="form_input" required>
+              <label for="purchaseName">Nombre completo</label>
+              <input id="purchaseName" name="nombre" type="text" class="form_input" required>
             </div>
 
             <div>
-              <label for="email">Correo electrónico</label>
-              <input id="email" name="email" type="email" class="form_input" required>
+              <label for="purchaseEmail">Correo electrónico</label>
+              <input id="purchaseEmail" name="email" type="email" class="form_input" required>
             </div>
 
             <div>
-              <label for="tarjeta">Tipo de tarjeta</label>
-              <select id="tarjeta" name="tarjeta" class="form_input" required>
+              <label for="purchaseCardType">Tipo de tarjeta</label>
+              <select id="purchaseCardType" name="tarjeta" class="form_input" required>
                 <option value="">Selecciona...</option>
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
@@ -173,23 +173,23 @@
             </div>
 
             <div>
-              <label for="numero">Número de tarjeta</label>
-              <input id="numero" name="numero" type="text" class="form_input" required>
+              <label for="purchaseNumber">Número de tarjeta</label>
+              <input id="purchaseNumber" name="numero" type="text" class="form_input" required>
             </div>
 
             <div>
-              <label for="titular">Nombre del titular</label>
-              <input id="titular" name="titular" type="text" class="form_input" required>
+              <label for="purchaseHolder">Nombre del titular</label>
+              <input id="purchaseHolder" name="titular" type="text" class="form_input" required>
             </div>
 
             <div>
-              <label for="caducidad">Fecha de caducidad</label>
-              <input id="caducidad" name="caducidad" type="month" class="form_input" required>
+              <label for="purchaseExpiry">Fecha de caducidad</label>
+              <input id="purchaseExpiry" name="caducidad" type="month" class="form_input" required>
             </div>
 
             <div>
-              <label for="cvv">Código CVV</label>
-              <input id="cvv" name="cvv" type="text" class="form_input" maxlength="3" required>
+              <label for="purchaseCVV">Código CVV</label>
+              <input id="purchaseCVV" name="cvv" type="text" class="form_input" maxlength="3" required>
             </div>
           </div>
 
@@ -230,5 +230,7 @@
       </div>
     </div>
   </footer>
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="script/app.js"></script>
 </body>
 </html>

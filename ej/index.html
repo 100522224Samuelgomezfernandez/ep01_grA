@@ -9,7 +9,7 @@
   <meta name="description" content="Comunidad colaborativa de viajes de aventureros de larga distancia. Explora experiencias reales, consejos, foros y packs de viaje recomendados.">
   <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body data-page="home">
   <!-- Cabecera del sitio -->
   <header class="header">
     <!-- Marca y título -->
@@ -58,13 +58,13 @@
         <hr>
 
         <!-- Carrusel de packs -->
-        <div class="packs">
+  <div class="packs" data-carousel="home">
           <!-- Cabecera de carrusel -->
           <div class="packs_head">
             <h2 class="packs_title">Packs de viaje recomendados</h2>
             <div class="arrows">
-              <button type="button">←</button>
-              <button type="button">→</button>
+              <button type="button" class="carousel_prev" data-carousel="home">←</button>
+              <button type="button" class="carousel_next" data-carousel="home">→</button>
             </div>
           </div>
 
@@ -157,15 +157,15 @@
       <!-- Formulario de acceso -->
       <section class="sidebar_section">
         <h2>Accede</h2>
-          <form>
-            <input type="text" placeholder="Usuario" class="form_input">
-            <input type="password" placeholder="Contraseña" class="form_input">
+          <form id="loginForm" novalidate>
+            <input id="loginUser" type="text" placeholder="Usuario" class="form_input">
+            <input id="loginPass" type="password" placeholder="Contraseña" class="form_input">
             <label class="checkbox_label">
-              <input type="checkbox"> Recordar credenciales
+              <input id="rememberUser" type="checkbox"> Recordar credenciales
             </label>
-            <a href="usuario.html" class="login_button">Iniciar sesión</a>
+            <button type="button" id="btnLogin" class="login_button">Iniciar sesión</button>
           </form>
-          <a href="registro.html" class="register_button">Registro</a>
+          <a href="registro.html" id="btnGoRegister" class="register_button">Registro</a>
       </section>
 
       <!-- Lista de destinos -->
@@ -230,5 +230,7 @@
       </div>
     </div>
   </footer>
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="script/app.js"></script>
 </body>
 </html>
