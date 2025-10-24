@@ -41,7 +41,8 @@
       carousels[carouselId] = {
         $items: $items,
         current: 0,
-        timer: null
+        timer: null,
+        resumeTimer: null
       };
 
       $items.removeClass('active');
@@ -52,12 +53,14 @@
     $('.carousel_next').on('click', function () {
       // flecha de la derecha avanza uno
       const id = $(this).data('carousel');
+      pauseCarousel(id); // Pausamos 5s el auto avance tras interacción manual (mejora acordada)
       moveCarousel(id, 1);
     });
 
     $('.carousel_prev').on('click', function () {
       // flecha izquierda retrocede uno
       const id = $(this).data('carousel');
+      pauseCarousel(id); // Pausamos 5s el auto avance tras interacción manual (mejora acordada)
       moveCarousel(id, -1);
     });
   }
@@ -82,6 +85,11 @@
       return;
     }
 
+    if (state.resumeTimer) {
+      clearTimeout(state.resumeTimer);
+      state.resumeTimer = null;
+    }
+
     if (state.timer) {
       clearInterval(state.timer);
     }
@@ -89,6 +97,28 @@
     state.timer = setInterval(function () {
       moveCarousel(id, 1);
     }, 2000); // va cambiando cada 2 seg sin que el user toque nada
+  }
+
+  function pauseCarousel(id) {
+    // Pausa temporal de 5s tras flechas: hemos decidido implementarlo aunque no lo especifica enunciado. 
+    const state = carousels[id];
+    if (!state) {
+      return;
+    }
+
+    if (state.timer) {
+      clearInterval(state.timer);
+      state.timer = null;
+    }
+
+    if (state.resumeTimer) {
+      clearTimeout(state.resumeTimer);
+    }
+
+    state.resumeTimer = setTimeout(function () {
+      state.resumeTimer = null;
+      startCarousel(id);
+    }, 5000);
   }
 
   function initHome() {
