@@ -288,15 +288,9 @@
         createdAt: new Date().toISOString()
       };
 
-      try {
-        users[login] = newUser;
-        saveUsers(users);
-        setSession(login);
-      } catch (error) {
-        console.error('Fallo guardando usuario en localStorage', error);
-        alert('No se pudo completar el registro por falta de espacio en el navegador. Prueba con una imagen más ligera o limpia el almacenamiento.');
-        return;
-      }
+      users[login] = newUser;
+      saveUsers(users);
+      setSession(login);
 
       alert('Registro completado. Bienvenido/a.');
       window.location.href = 'usuario.html';
@@ -513,7 +507,6 @@
     return regex.test(email);
   }
 
-  function isValidBirthDate(parts) {
   function isValidBirthDate(value) {
     // revisa que la fecha exista, no sea muy antigua ni futura
     const date = new Date(value + 'T00:00:00');
@@ -614,12 +607,7 @@
 
   function saveUsers(users) {
     // guardo todos los usuarios a la vez (no hay servidor, asi que toca asi)
-    try {
-      window.localStorage.setItem(STORAGE_KEYS.users, JSON.stringify(users));
-    } catch (error) {
-      console.error('Error guardando usuarios en localStorage', error);
-      throw error;
-    }
+    window.localStorage.setItem(STORAGE_KEYS.users, JSON.stringify(users));
   }
 
   function setSession(login) {
@@ -674,7 +662,4 @@
       return map[ch] || ch;
     });
   }
-
-}
- 
 })();
