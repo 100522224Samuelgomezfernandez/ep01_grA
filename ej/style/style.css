@@ -398,26 +398,6 @@ body {
     justify-content: center;
 }
 
-body[data-page="register"] #nacimiento::-webkit-datetime-edit {
-    display: flex; /* Forzamos orden visual día/mes/año en navegadores WebKit */
-}
-
-body[data-page="register"] #nacimiento::-webkit-datetime-edit-day-field {
-    order: 1;
-}
-
-body[data-page="register"] #nacimiento::-webkit-datetime-edit-month-field {
-    order: 2;
-}
-
-body[data-page="register"] #nacimiento::-webkit-datetime-edit-year-field {
-    order: 3;
-}
-
-body[data-page="register"] #nacimiento::-webkit-datetime-edit-text {
-    order: 4;
-}
-
 .form_page {
     width: 60%;
     padding: 30px;
